@@ -1,0 +1,30 @@
+name: Compile LaTeX Paper
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: main.tex
+          args: "-pdf -file-line-error -interaction=nonstopmode -outdir=build"
+
+      - name: Copy PDF to root
+        run: cp build/main.pdf SISTER_paper.pdf
+
+      - name: Upload PDF Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SISTER_paper_pdf
+          path: SISTER_paper.pdf
