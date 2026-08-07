@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "models": [
+    {
+      "id": "openai/gpt-oss-20b",
+      "context_length": 65536,
+      "reasoning_effort": null
+    },
+    {
+      "id": "qwen/qwen3.5-9b",
+      "context_length": 65536,
+      "reasoning_effort": null
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-qat",
+      "context_length": 32768,
+      "reasoning_effort": null
+    },
+    {
+      "id": "mistral-7b-instruct-v0.2",
+      "context_length": 32768,
+      "reasoning_effort": null
+    },
+    {
+      "id": "prism-ml/bonsai-27b",
+      "context_length": 65536,
+      "reasoning_effort": null
+    },
+    {
+      "id": "liquid/lfm2-24b-a2b",
+      "context_length": 65536,
+      "reasoning_effort": null
+    },
+    {
+      "id": "thedrummer_cydonia-24b-v4.2.0",
+      "context_length": 65536,
+      "reasoning_effort": null
+    }
+  ]
+}
