@@ -65,6 +65,8 @@ last_updated: "2026-08-08"
   `results/results_<model>.jsonl` and `results/all_results.jsonl`; every line
   identifies its model, parameters, and quant file. `results/index.json` is
   the single status and provenance index.
+- `python3 runs/merge_results.py --output merged_results collaborator_a/results collaborator_b/results`
+  — validate and merge completed, distinct-model collaborator result directories.
 
 ## Common Issues
 
