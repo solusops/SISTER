@@ -79,6 +79,10 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   matching `results/index.json` entry, which supplies the exact run ID, model
   identity, context, inference settings, dataset/protocol/runner hashes,
   lifecycle, and file hashes needed for independent review.
+- Collaborator merge: use `runs/merge_results.py` only after each collaborator
+  has completed a distinct model. It validates each source index and dual raw
+  datasets, rejects duplicate models or record IDs, and creates fresh
+  per-model files, combined JSONL, and one rebuilt index without source paths.
 
 ## Boundaries
 
