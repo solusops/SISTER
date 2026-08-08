@@ -2,10 +2,11 @@
 
 Run commands from the repository root. The evaluator has a fixed 16,384-token
 context cap. For LM Studio it uses one parallel slot, Flash Attention, GPU KV
-cache, and disables reasoning only for models that explicitly support an
-`off` setting; GPT-OSS receives no reasoning field because it does not support
-`off`. There is no tracked model sequence: choose the exact model or models to
-run.
+cache, and requests reasoning `off` only for models that explicitly support
+it; GPT-OSS receives no reasoning field because it does not support `off`.
+If LM Studio returns reasoning tokens anyway, the evaluator fails before saving
+the response. There is no tracked model sequence: choose the exact model or
+models to run.
 
 ## LM Studio
 
