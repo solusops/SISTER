@@ -20,7 +20,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: when transferring verified evaluation results into the paper
 grounds_to: []
-last_updated: "2026-08-07"
+last_updated: "2026-08-08"
 ---
 
 # Evaluation
@@ -34,43 +34,51 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 - Dataset source and schema: `runs/benchmark_data.json`, containing 160 items
   across comedy, fantasy, historical fiction, mystery, romance, and science
   fiction; each item has one full instruction and 5–9 ordered shards.
-- Models and inference interface: The tracked `runs/models.json` plan contains
-  the exact LM Studio model IDs, per-model context lengths, and optional
-  reasoning settings. The runner loads one model at a time through native
-  `POST /api/v1/models/load`, sends completions through
-  `POST /v1/chat/completions`, and unloads the returned instance before
-  continuing. `--sequence` executes this plan in order; command-line context
-  and reasoning overrides are recorded in the affected run.
+- Models and inference interface: collaborators select exact model IDs with
+  `--backend lmstudio|ollama --models MODEL …`. Every run uses a fixed 16,384
+  context-token cap and omits the reasoning field. LM Studio loads one model at
+  a time through native `POST /api/v1/models/load`, sends completions through
+  `POST /v1/chat/completions`, and unloads the returned instance. Ollama uses
+  `GET /api/tags` for model discovery and `POST /api/chat` with `num_ctx` set
+  to the same cap. The explicit selection is recorded in `index.json` so the
+  dashboard can project a batch ETA from the active model's observed rate.
+- Context policy: use at most 32K for models under 20B parameters and 16K for
+  models at or above 20B. Mistral 7B Q8 also uses 16K: at 32K its GPU KV cache
+  required an additional 4 GiB and failed to allocate on the available GPU.
+- Active run policy: every explicit model selection uses 16,384 context tokens
+  and sends no `reasoning_effort` field. Keep result sets from different
+  reasoning modes separate: the earlier partial high-reasoning attempt is
+  archived in `runs/results/reasoning_on/`, while non-reasoning baselines are
+  archived in `runs/results/reasoning_off/`; the brief unsupported `none`
+  attempt is isolated in `runs/results/reasoning_none/`. The fresh
+  non-reasoning sequence writes to `runs/results/`.
 - Conversation prompts, turn count, and state handling: The `full` condition
   sends the complete instruction in one user turn. The `sharded` condition
   sends each shard as a separate user turn, retaining every assistant reply in
   the conversation and scoring the final reply.
-- Baselines and comparison conditions: historical collaborator outputs are
-  isolated artifacts. The new runner deliberately uses its own versioned raw
-  result contract; it does not mix or silently resume any legacy result file.
+- Baselines and comparison conditions: archived or error-context artifacts are
+  not experiment evidence and must not be treated as saved runs. A normal
+  invocation starts a fresh, versioned raw-result run; it does not mix or
+  silently resume legacy files. Use `--resume` only when deliberately
+  recovering a known interrupted run in the active results directory.
 
 ## Metrics and Results
 
 - Primary performance metric: [TO BE DETERMINED — populate after first implementation].
 - Supporting metrics and aggregation: [TO BE DETERMINED — populate after first implementation].
-- Result artifacts and storage location: the runner writes every raw generated
-  response immediately to both `results/<run-id>/outputs.json` (one
-  self-contained model/configuration run) and the matching run group in
-  `results/all.json` (the independently usable raw dataset across all models
-  and runs). Run-level fields—model/context settings, generation settings, and
-  dataset/protocol provenance—are stored once in the run manifest and once in
-  the aggregate run group; compact output records contain only item identity,
-  turn/output data, and a stable record ID. `results/index.json` is the proof
-  and review index: it records run configuration fingerprints, hashes of the
-  dataset/prompt/runner and raw files, model identity, lifecycle state, errors,
-  progress, and compact record-count/record-ID digests. If a process stops
-  between the two writes, `--resume` reconciles matching record IDs without
-  regenerating output.
-- Minimum metadata needed to reproduce a result: the raw record and its
-  enclosing run directory or aggregate run group; the matching index entry
-  supplies the exact run ID, model identity, context, inference settings,
-  dataset/protocol/runner hashes, lifecycle, and file hashes needed for
-  independent review.
+- Result artifacts and storage location: the runner appends each raw generated
+  response to `results/results_<model>.jsonl` and to
+  `results/all_results.jsonl`, the independent combined dataset. Every JSONL
+  line contains `model_id`, `model_name`, `parameters`, and `quant_file` as
+  well as the task, condition, turn, text, and metrics. `results/index.json`
+  is the only metadata file; it records model configuration, lifecycle,
+  progress, and integrity checks. Result artifacts contain no absolute local
+  paths. If a process stops between the two writes, `--resume` reconciles the
+  matching record IDs without regenerating output.
+- Minimum metadata needed to reproduce a result: the raw record plus its
+  matching `results/index.json` entry, which supplies the exact run ID, model
+  identity, context, inference settings, dataset/protocol/runner hashes,
+  lifecycle, and file hashes needed for independent review.
 
 ## Boundaries
 
@@ -78,4 +86,5 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 - Do not change the dataset, model, prompt, turn count, or metric silently between runs.
 - Keep experiment-specific complexity in this context and its patterns rather than spreading it across general architecture.
 - Treat raw results as immutable evidence. Future scoring or annotation writes
-  separate derived artifacts and never overwrites `outputs.json` or `all.json`.
+  separate derived artifacts and never overwrites the per-model JSONL file or
+  `all_results.jsonl`.

@@ -17,7 +17,7 @@ edges:
   - target: patterns/run-evaluation.md
     condition: when setup is complete and an evaluation run is being executed
 grounds_to: []
-last_updated: "2026-08-07"
+last_updated: "2026-08-08"
 ---
 
 # Setup
@@ -32,7 +32,7 @@ last_updated: "2026-08-07"
 
 1. Clone or open the repository and confirm the Python environment: [TO BE DETERMINED].
 2. No Python package installation is required for the runner.
-3. Configure LM Studio's local server and load the desired models.
+3. Configure either LM Studio's local server or Ollama with the desired model.
 4. Compile the paper with `make` to verify the LaTeX toolchain.
 
 ## Environment Variables
@@ -40,6 +40,7 @@ last_updated: "2026-08-07"
 - LM Studio endpoint: `LM_STUDIO_BASE_URL` (defaults to
   `http://localhost:1234/v1`). Optional bearer token:
   `LM_STUDIO_API_KEY` (defaults to `lm-studio`).
+- Ollama endpoint: `OLLAMA_BASE_URL` (defaults to `http://localhost:11434`).
 - Dataset location or identifier: [TO BE DETERMINED].
 - Evaluation configuration/output location: [TO BE DETERMINED].
 
@@ -49,21 +50,25 @@ last_updated: "2026-08-07"
 - `make watch` — continuously recompile the paper while editing.
 - `make clean` — remove LaTeX build artifacts and the generated PDF.
 - `make diff REF=HEAD~1` — generate a LaTeX diff against a Git revision.
-- `python3 runs/run_experiment.py --list-models` — list exact model IDs exposed
-  by LM Studio.
-- `python3 runs/run_experiment.py --sequence --resume` — run or resume the
-  tracked `runs/models.json` sequence. Each entry carries its own context
-  length; each model is explicitly loaded and unloaded before the next starts.
-- Use `--no-manage-models` only when LM Studio is already managing model
-  lifecycles externally.
-- Add `--limit 3` for a smoke test. The default `--output results` writes
-  immediate raw copies to `results/<run-id>/outputs.json` and the matching run
-  group in `results/all.json`; `results/index.json` contains the provenance,
-  progress, hashes, and compact record digests required to audit or resume.
+- `python3 runs/run_experiment.py --backend lmstudio --list-models` — list
+  exact LM Studio model IDs.
+- `python3 runs/run_experiment.py --backend ollama --list-models` — list exact
+  locally available Ollama tags.
+- `python3 runs/run_experiment.py --backend lmstudio --models MODEL_ID` — run
+  one or more explicit LM Studio model IDs.
+- `python3 runs/run_experiment.py --backend ollama --models MODEL_TAG` — run
+  one or more explicit Ollama tags. Every run uses a fixed 16,384-token cap.
+- Add `--resume` only to recover a known interrupted run in the current
+  `results/` directory. Do not infer resumable work from archived, legacy, or
+  error-context artifacts.
+- Add `--limit 3` for a smoke test. The default `--output results` appends to
+  `results/results_<model>.jsonl` and `results/all_results.jsonl`; every line
+  identifies its model, parameters, and quant file. `results/index.json` is
+  the single status and provenance index.
 
 ## Common Issues
 
-- Evaluation setup or execution failures: Confirm LM Studio's server is
-  running, use `--list-models` to obtain exact API IDs, and ensure each model
-  is available to the server before starting a long run.
+- Evaluation setup or execution failures: Confirm the selected backend is
+  running, use its `--list-models` output to obtain exact IDs or tags, and
+  ensure each requested model is available before starting a long run.
 - LaTeX compilation failures: [TO BE DETERMINED after the first collaborative build issue].

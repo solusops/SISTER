@@ -16,7 +16,7 @@ edges:
     condition: when working on datasets, models, multi-turn protocols, metrics, or result artifacts
   - target: patterns/INDEX.md
     condition: when starting any task and looking for a repeatable workflow
-last_updated: "2026-08-07"
+last_updated: "2026-08-08"
 ---
 
 # Session Bootstrap
@@ -31,11 +31,17 @@ Then read this file fully before doing anything else in this session.
 - The repository contains a modular LaTeX paper workflow with `main.tex`, sections, figures, tables, macros, and bibliography.
 - `Makefile` and `build.ps1` define paper compilation and related PDF workflows.
 - The project goal is defined: evaluate whether LLM performance degrades in multi-turn conversations.
-- `runs/run_experiment.py` evaluates 40 romance/mystery writing tasks using full and sharded multi-turn conditions.
-- The runner uses LM Studio's API and a tracked model/context sequence. It
-  writes every raw response immediately to a self-contained run dataset and
-  an independent all-model dataset; `results/index.json` records provenance,
-  progress, hashes, and resume evidence.
+- `runs/run_experiment.py` evaluates 160 creative-writing tasks across six
+  domains using full and sharded multi-turn conditions.
+- The runner supports both LM Studio and Ollama. Collaborators select explicit
+  model IDs with `--backend {lmstudio,ollama} --models …`; every run is capped
+  at 16,384 context tokens and omits the reasoning field.
+  It appends every raw response immediately to a readable per-model JSONL file
+  and an independent combined JSONL dataset; `results/index.json` records
+  provenance and progress. `--resume` is reserved for a known interrupted run
+  in the active results directory.
+  Previous runs are isolated by reasoning mode under `runs/results/`.
+- Do not use `runs/context error/` as run history.
 
 **Not yet built:**
 - The workflow that transfers verified results into paper text, figures, or tables.
