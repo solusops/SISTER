@@ -16,7 +16,7 @@ edges:
     condition: when working on datasets, models, multi-turn protocols, metrics, or result artifacts
   - target: patterns/INDEX.md
     condition: when starting any task and looking for a repeatable workflow
-last_updated: "2026-08-09"
+last_updated: "2026-08-10"
 ---
 
 # Session Bootstrap
@@ -38,7 +38,9 @@ Then read this file fully before doing anything else in this session.
   set with its custom no-thinking template. After a seed-12345 context-length
   failure at 64/320 conditions, it continued from raw sequence 255 with seed
   1234; `results/index.json` records both seed segments. The prior native-API
-  Qwen attempt is isolated under `runs/test/older_outputs/`.
+  Qwen attempt is isolated under `runs/test/older_outputs/`. An explicit
+  Granite-after-Qwen handoff is armed but deliberately has not touched the
+  shared index or datasets; it will do so only after Qwen completes.
 - `Makefile` and `build.ps1` define paper compilation and related PDF workflows.
 - The project goal is defined: evaluate whether LLM performance degrades in multi-turn conversations.
 - `runs/run_experiment.py` evaluates 160 creative-writing tasks across six
