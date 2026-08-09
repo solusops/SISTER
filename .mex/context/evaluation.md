@@ -20,7 +20,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: when transferring verified evaluation results into the paper
 grounds_to: []
-last_updated: "2026-08-09"
+last_updated: "2026-08-10"
 ---
 
 # Evaluation
@@ -84,13 +84,18 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   it never records a local model path.
 - A context cap is not a completion-token ceiling. Granite 4 H Tiny showed
   that a model can consume the remaining context and return `finish_reason:
-  length`; select and verify an explicit completion-token policy before a
-  clean restart rather than treating those rows as normal output.
+  length`. The runner rejects that reply before writing it. For an explicitly
+  chosen continuation, its first such response discards that entire attempt,
+  increments the seed, and records the retry in `index.json`; a second ends
+  the run cleanly as `stopped_context_overflow`.
 - In the paused Granite partial run, all 15 non-`stop` rows were sharded
   turns at exactly 16,384 total tokens. Ten were intermediate turns; their
   oversized assistant messages altered the conversation subsequently sent to
   LM Studio, so 14 final conditions in that partial run are not valid evidence
-  even where their own finish reason is `stop`. Do not resume or merge it.
+  even where their own finish reason is `stop`. Before its continuation, use
+  `--discard-context-overflow-attempts` to remove every one of those complete
+  trajectories from both raw datasets and record the aggregate cleanup in the
+  single index.
 - The runner rejects any completion whose finish reason is not `stop` before
   it writes a raw record. This preserves immutable outputs without changing a
   model's prompt, sampling, or output ceiling; an affected run fails for
@@ -138,6 +143,9 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   has completed a distinct model. It validates each source index and dual raw
   datasets, rejects duplicate models or record IDs, and creates fresh
   per-model files, combined JSONL, and one rebuilt index without source paths.
+- A one-model queue is opt-in: `--wait-for-run-id RUN_ID` waits without
+  touching result files until that exact predecessor is `completed`, then starts
+  the explicitly supplied model. It never creates a default global sequence.
 
 ## Boundaries
 

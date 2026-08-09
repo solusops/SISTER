@@ -18,7 +18,7 @@ edges:
   - target: context/setup.md
     condition: when the runtime or dependencies are not yet configured
 grounds_to: []
-last_updated: "2026-08-09"
+last_updated: "2026-08-10"
 ---
 
 # Run Evaluation
@@ -58,6 +58,11 @@ Load `context/evaluation.md` and confirm the current dataset, selected backend, 
 - Reject a reply with any finish reason other than `stop` before writing it to
   either raw dataset. Do not retrofit a token ceiling or resume an affected
   run without an explicit user decision, because either could change outputs.
+- When the user explicitly elects recovery after a `length` response, use the
+  runner's first-overflow retry rule rather than admitting a truncated reply:
+  it removes the incomplete attempt, increments and logs the seed, and stops
+  cleanly if a second context-length response occurs. Use
+  `--wait-for-run-id` only for a user-approved one-model handoff.
 - A zero thinking-token budget is model-specific evidence, not a general
   reasoning-off control. Probe every new model for visible reasoning content
   and reasoning-token usage before its full run.
