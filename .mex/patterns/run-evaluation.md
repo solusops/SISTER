@@ -18,7 +18,7 @@ edges:
   - target: context/setup.md
     condition: when the runtime or dependencies are not yet configured
 grounds_to: []
-last_updated: "2026-08-08"
+last_updated: "2026-08-09"
 ---
 
 # Run Evaluation
@@ -52,6 +52,15 @@ Load `context/evaluation.md` and confirm the current dataset, selected backend, 
   behavior with a temporary load/request/unload before a full restart.
 - Do not add product infrastructure or abstractions to solve a one-off experiment need.
 - Treat missing reproducibility metadata as a failure until the required fields are defined.
+- Some LM Studio records omit `selected_variant`. Verify that the runner emits
+  the safe fallback `model_key@quant_name` before a full run; never use a
+  local model path as a substitute.
+- Reject a reply with any finish reason other than `stop` before writing it to
+  either raw dataset. Do not retrofit a token ceiling or resume an affected
+  run without an explicit user decision, because either could change outputs.
+- A zero thinking-token budget is model-specific evidence, not a general
+  reasoning-off control. Probe every new model for visible reasoning content
+  and reasoning-token usage before its full run.
 
 ## Verify
 

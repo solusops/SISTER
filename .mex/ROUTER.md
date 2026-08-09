@@ -16,7 +16,7 @@ edges:
     condition: when working on datasets, models, multi-turn protocols, metrics, or result artifacts
   - target: patterns/INDEX.md
     condition: when starting any task and looking for a repeatable workflow
-last_updated: "2026-08-08"
+last_updated: "2026-08-09"
 ---
 
 # Session Bootstrap
@@ -29,13 +29,23 @@ Then read this file fully before doing anything else in this session.
 
 **Working:**
 - The repository contains a modular LaTeX paper workflow with `main.tex`, sections, figures, tables, macros, and bibliography.
+- As of 2026-08-09, Gemma 4 12B QAT, Llama 3.1 8B, and Mistral 7B Instruct
+  v0.3 Q4_K_M are complete through the standard fixed-seed OpenAI-compatible
+  protocol. GPT-OSS 20B is complete but its raw records report reasoning-token
+  usage and therefore need a policy decision before joining a no-reasoning
+  baseline. Granite 4 H Tiny and Cydonia 24B attempts are stopped or stale
+  and isolated. Qwen 3.5 9B Q4_K_M is running in the flat `runs/results/`
+  set with its custom no-thinking template. After a seed-12345 context-length
+  failure at 64/320 conditions, it continued from raw sequence 255 with seed
+  1234; `results/index.json` records both seed segments. The prior native-API
+  Qwen attempt is isolated under `runs/test/older_outputs/`.
 - `Makefile` and `build.ps1` define paper compilation and related PDF workflows.
 - The project goal is defined: evaluate whether LLM performance degrades in multi-turn conversations.
 - `runs/run_experiment.py` evaluates 160 creative-writing tasks across six
   domains using full and sharded multi-turn conditions.
 - The runner supports both LM Studio and Ollama. Collaborators select explicit
   model IDs with `--backend {lmstudio,ollama} --models …`; every run is capped
-  at 16,384 context tokens and omits the reasoning field.
+  at 16,384 context tokens and uses the OpenAI-compatible LM Studio endpoint.
   It appends every raw response immediately to a readable per-model JSONL file
   and an independent combined JSONL dataset; `results/index.json` records
   provenance and progress. `--resume` is reserved for a known interrupted run

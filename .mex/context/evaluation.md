@@ -20,7 +20,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: when transferring verified evaluation results into the paper
 grounds_to: []
-last_updated: "2026-08-08"
+last_updated: "2026-08-09"
 ---
 
 # Evaluation
@@ -79,6 +79,61 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   matching `results/index.json` entry, which supplies the exact run ID, model
   identity, context, inference settings, dataset/protocol/runner hashes,
   lifecycle, and file hashes needed for independent review.
+- LM Studio may omit `selected_variant` for an installed model. In that case,
+  the runner records the safe derived quant identifier `model_key@quant_name`;
+  it never records a local model path.
+- A context cap is not a completion-token ceiling. Granite 4 H Tiny showed
+  that a model can consume the remaining context and return `finish_reason:
+  length`; select and verify an explicit completion-token policy before a
+  clean restart rather than treating those rows as normal output.
+- In the paused Granite partial run, all 15 non-`stop` rows were sharded
+  turns at exactly 16,384 total tokens. Ten were intermediate turns; their
+  oversized assistant messages altered the conversation subsequently sent to
+  LM Studio, so 14 final conditions in that partial run are not valid evidence
+  even where their own finish reason is `stop`. Do not resume or merge it.
+- The runner rejects any completion whose finish reason is not `stop` before
+  it writes a raw record. This preserves immutable outputs without changing a
+  model's prompt, sampling, or output ceiling; an affected run fails for
+  review instead of admitting a truncated row.
+- Bonsai 27B Q1_0 ignored `thinking_budget_tokens: 0` in a 2026-08-09 probe
+  and emitted 685 reasoning tokens. Do not start its evaluation under that
+  field alone; test an explicitly approved reasoning-off configuration first.
+- Qwen 3.5 9B Q4_K_M ignored `reasoning: "off"` and
+  `thinking_budget_tokens: 0` on LM Studio's OpenAI-compatible endpoint with
+  its default template. Its brief native-API run is stopped and excluded
+  because native chat cannot preserve the fixed-seed, OpenAI-compatible
+  protocol used by the other model evaluations. A later OpenAI-compatible
+  baseline start used the standard `{temperature: 0.8, seed: 12345,
+  thinking_budget_tokens: 0}` settings and was stopped before its first raw
+  response; it is likewise excluded. With a user-loaded custom template, a
+  disposable request under those same settings returned `stop`, 58 completion
+  tokens, and zero API-reported reasoning tokens. Record the template identity
+  before treating a full run as reproducible evidence.
+- The active Qwen run uses that verified custom template and the standard
+  16,384-context, single-slot LM Studio configuration. Its raw outputs are in
+  the flat `results/` root alongside the other model files, and its records
+  continue to show `finish_reason: stop` and zero API-reported reasoning
+  tokens.
+- The Qwen run stopped after 254 saved raw records and 64 completed conditions:
+  `historical_fiction/13` in the full condition returned `finish_reason:
+  length` at 16,220 completion tokens and 16,384 total tokens. The runner
+  rejected that response before writing it, then unloaded the model in its
+  normal cleanup path. A disposable seed-1234 probe of that same instruction
+  stopped normally at 879 completion tokens with zero reasoning tokens.
+  Per user direction, the run continued at raw sequence 255 with seed 1234;
+  `results/index.json` records the initial seed-12345 segment and the
+  seed-1234 continuation segment. The older native-API Qwen partial is stored
+  separately in `test/older_outputs/qwen_native_api_attempt/`.
+- The installed Mistral target is `mistralai/mistral-7b-instruct-v0.3` at
+  Q4_K_M.
+- Mistral v0.3 Q4_K_M completed all 320 conditions with 1,156 raw records,
+  normal stops, and zero reasoning-token rows. No collected GPT-OSS 20B run
+  is a zero-reasoning baseline: the completed active-root file has nonzero
+  reasoning tokens on 1,155/1,156 rows, and the completed file under the
+  misleading `reasoning_off/` name has nonzero reasoning tokens on
+  1,154/1,156 rows. The 8-row `reasoning_none/` and 282-row `reasoning_on/`
+  partials also report nonzero reasoning on every row. Classify all GPT-OSS
+  outputs as reasoning-enabled.
 - Collaborator merge: use `runs/merge_results.py` only after each collaborator
   has completed a distinct model. It validates each source index and dual raw
   datasets, rejects duplicate models or record IDs, and creates fresh
