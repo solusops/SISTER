@@ -146,6 +146,10 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 - A one-model queue is opt-in: `--wait-for-run-id RUN_ID` waits without
   touching result files until that exact predecessor is `completed`, then starts
   the explicitly supplied model. It never creates a default global sequence.
+- `--context-length TOKENS` records a new `context_segments` entry when an
+  explicitly continued run changes its context window. Previous raw rows retain
+  their historical window through the preceding segment; the run-level model
+  context denotes the active setting.
 
 ## Boundaries
 

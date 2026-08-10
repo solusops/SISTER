@@ -63,6 +63,9 @@ Load `context/evaluation.md` and confirm the current dataset, selected backend, 
   it removes the incomplete attempt, increments and logs the seed, and stops
   cleanly if a second context-length response occurs. Use
   `--wait-for-run-id` only for a user-approved one-model handoff.
+- Change a continuing run's context only with `--context-length`; verify a
+  disposable load at the requested window before launch and retain the prior
+  context in `index.json`'s `context_segments`.
 - A zero thinking-token budget is model-specific evidence, not a general
   reasoning-off control. Probe every new model for visible reasoning content
   and reasoning-token usage before its full run.
