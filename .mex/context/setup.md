@@ -25,7 +25,6 @@ last_updated: "2026-08-08"
 ## Prerequisites
 
 - Python: Python 3.10+ is recommended; the runner uses only the standard library.
-- A LaTeX distribution with `latexmk`: supported distribution/version is [TO BE DETERMINED].
 - Git for collaborative repository work.
 
 ## First-time Setup
@@ -33,7 +32,6 @@ last_updated: "2026-08-08"
 1. Clone or open the repository and confirm the Python environment: [TO BE DETERMINED].
 2. No Python package installation is required for the runner.
 3. Configure either LM Studio's local server or Ollama with the desired model.
-4. Compile the paper with `make` to verify the LaTeX toolchain.
 
 ## Environment Variables
 
@@ -46,10 +44,6 @@ last_updated: "2026-08-08"
 
 ## Common Commands
 
-- `make` — compile the paper PDF.
-- `make watch` — continuously recompile the paper while editing.
-- `make clean` — remove LaTeX build artifacts and the generated PDF.
-- `make diff REF=HEAD~1` — generate a LaTeX diff against a Git revision.
 - `python3 runs/run_experiment.py --backend lmstudio --list-models` — list
   exact LM Studio model IDs.
 - `python3 runs/run_experiment.py --backend ollama --list-models` — list exact

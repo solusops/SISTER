@@ -33,8 +33,9 @@ Every generated raw response is written immediately to a flat per-model JSONL
 file and to `runs/results/all_results.jsonl`.
 `runs/results/index.json` records provenance, progress, generation segments,
 context segments, and integrity metadata for the active dataset.
-Collaborators use verified results while editing the modular LaTeX paper files.
-The existing Makefile or `build.ps1` compiles `main.tex` and its sections into the paper PDF.
+Collaborators use verified results while editing the manuscript source retained
+under `paper/`. The repository intentionally does not maintain a manuscript
+build pipeline or compiled PDF.
 
 ## Key Components
 
@@ -47,8 +48,8 @@ The existing Makefile or `build.ps1` compiles `main.tex` and its sections into t
   runs, and `runs/results/index.json` for provenance, progress, compact record
   digests, and integrity metadata. Superseded and diagnostic outputs are
   isolated under `runs/test/older_outputs/`.
-- **LaTeX paper workspace** — `main.tex`, `sections/`, `figures/`, `tables/`, and `macros/` hold the collaborative manuscript.
-- **Paper build pipeline** — `Makefile` and `build.ps1` compile the LaTeX source into a PDF.
+- **Manuscript source** — `paper/` holds the editable draft, section files,
+  figures, tables, macros, and bibliography.
 
 ## External Dependencies
 
@@ -56,7 +57,6 @@ The existing Makefile or `build.ps1` compiles `main.tex` and its sections into t
 - **LLM inference access** — LM Studio and Ollama provide local model listing
   and chat completion over OpenAI-compatible HTTP APIs; endpoints are
   configurable.
-- **LaTeX distribution with `latexmk`** — compiles the paper; the supported distribution and version are [TO BE DETERMINED].
 - **Git repository** — supports collaboration and review of Python, results, and `.tex` changes.
 
 ## What Does NOT Exist Here
@@ -64,3 +64,4 @@ The existing Makefile or `build.ps1` compiles `main.tex` and its sections into t
 - No product UI, production service, or user-facing application.
 - No database or persistent service layer has been selected; this is [TO BE DETERMINED].
 - No production deployment or over-engineered platform architecture.
+- No PDF build or document-generation workflow is maintained in this repository.

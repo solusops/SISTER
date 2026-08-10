@@ -28,7 +28,8 @@ Then read this file fully before doing anything else in this session.
 ## Current Project State
 
 **Working:**
-- The repository contains a modular LaTeX paper workflow with `main.tex`, sections, figures, tables, macros, and bibliography.
+- The repository retains an editable manuscript source under `paper/`, alongside
+  the study materials and active generation data.
 - As of 2026-08-10, the active flat `runs/results/` dataset contains exactly
   six completed models: GPT-OSS 20B, Gemma 4 12B QAT, Llama 3.1 8B, Granite 4
   H Tiny, Mistral 7B Instruct v0.3, and Qwen 3.5 9B Q4_K_M. Each has 320 final
@@ -37,7 +38,6 @@ Then read this file fully before doing anything else in this session.
   Granite's first context-length retry is likewise recorded. Cydonia, prior
   reasoning-mode outputs, failed/partial attempts, diagnostics, and caches
   are isolated under `runs/test/older_outputs/`.
-- `Makefile` and `build.ps1` define paper compilation and related PDF workflows.
 - The project goal is defined: evaluate whether LLM performance degrades in multi-turn conversations.
 - `runs/run_experiment.py` evaluates 160 creative-writing tasks across six
   domains using full and sharded multi-turn conditions.
@@ -60,7 +60,8 @@ Then read this file fully before doing anything else in this session.
   model generations remain under `runs/results/`.
 
 **Not yet built:**
-- The workflow that transfers verified results into paper text, figures, or tables.
+- The scoring workflow and the transfer of verified results into manuscript text,
+  figures, or tables.
 
 **Known issues:**
 - LM Studio model IDs must be obtained from the running server; UI display names may be truncated or differ from API IDs.
