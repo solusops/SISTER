@@ -29,18 +29,14 @@ Then read this file fully before doing anything else in this session.
 
 **Working:**
 - The repository contains a modular LaTeX paper workflow with `main.tex`, sections, figures, tables, macros, and bibliography.
-- As of 2026-08-09, Gemma 4 12B QAT, Llama 3.1 8B, and Mistral 7B Instruct
-  v0.3 Q4_K_M are complete through the standard fixed-seed OpenAI-compatible
-  protocol. GPT-OSS 20B is complete but its raw records report reasoning-token
-  usage and therefore need a policy decision before joining a no-reasoning
-  baseline. Granite 4 H Tiny and Cydonia 24B attempts are stopped or stale
-  and isolated. Qwen 3.5 9B Q4_K_M is running in the flat `runs/results/`
-  set with its custom no-thinking template. After a seed-12345 context-length
-  failure at 64/320 conditions, it continued from raw sequence 255 with seed
-  1234; `results/index.json` records both seed segments. The prior native-API
-  Qwen attempt is isolated under `runs/test/older_outputs/`. An explicit
-  Granite-after-Qwen handoff is armed but deliberately has not touched the
-  shared index or datasets; it will do so only after Qwen completes.
+- As of 2026-08-10, the active flat `runs/results/` dataset contains exactly
+  six completed models: GPT-OSS 20B, Gemma 4 12B QAT, Llama 3.1 8B, Granite 4
+  H Tiny, Mistral 7B Instruct v0.3, and Qwen 3.5 9B Q4_K_M. Each has 320 final
+  conditions and 1,156 raw records; the combined dataset has 6,936 unique
+  records. Qwen's index retains its seed and 16K-to-22,528 context segments;
+  Granite's first context-length retry is likewise recorded. Cydonia, prior
+  reasoning-mode outputs, failed/partial attempts, diagnostics, and caches
+  are isolated under `runs/test/older_outputs/`.
 - `Makefile` and `build.ps1` define paper compilation and related PDF workflows.
 - The project goal is defined: evaluate whether LLM performance degrades in multi-turn conversations.
 - `runs/run_experiment.py` evaluates 160 creative-writing tasks across six

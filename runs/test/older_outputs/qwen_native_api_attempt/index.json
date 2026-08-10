@@ -1,0 +1,70 @@
+{
+  "runs": [
+    {
+      "config_fingerprint": "a3ae2d9804c2b7dc0d68f0036664fc84daa3a21790d9725af9f1c724ef2d1d13",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "Paused by user after SIGINT did not interrupt an active native API request",
+      "finished_at": "2026-08-09T11:03:49.838271+00:00",
+      "generation": {
+        "reasoning": "off",
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 16384,
+        "id": "qwen/qwen3.5-9b",
+        "identity": {
+          "architecture": "qwen35",
+          "display_name": "Qwen3.5 9B",
+          "max_context_length": 262144,
+          "model_id": "qwen/qwen3.5-9b",
+          "parameters": "9B",
+          "publisher": "qwen",
+          "quantization": "Q4_K_M",
+          "quantization_bits": 4,
+          "selected_variant": "qwen/qwen3.5-9b@q4_k_m"
+        }
+      },
+      "model_instance_id": "qwen/qwen3.5-9b",
+      "model_metadata_error": null,
+      "progress": {
+        "completed_conditions": 5,
+        "raw_records": 19,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "e4b207a796b91002ac50f5aa2552c427273cd07e19ff9f7f8e713e8e7b918cf4",
+        "record_count": 19,
+        "record_ids_sha256": "27b516a5db06a507a1a7632be9558072453e92d1b121937a22f0c32dfb57f9e4",
+        "run_output_path": "results_qwen-qwen3-5-9b.jsonl",
+        "run_output_sha256": "97bf1e992b286ce53b415551e02a8336a250a766c36f6e930e58199cdbaceb99"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "api_mode": "native",
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lmstudio"
+      },
+      "run_id": "e5fd0505138442c8928c564acf18f6c8",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "e113fbe92d996007cd5a8753b7b6dcf77a987558ee204521d8e6f1f70907001d"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-09T10:57:37.253005+00:00",
+      "status": "stopped_by_user"
+    }
+  ],
+  "schema_version": 1
+}

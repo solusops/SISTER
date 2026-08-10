@@ -1,0 +1,69 @@
+{
+  "runs": [
+    {
+      "archive_reason": "partial run excluded from current six-model dataset",
+      "archived_at": "2026-08-10T11:38:54.545524+00:00",
+      "config_fingerprint": "42cee96ed8b516d0a54f1e488224ca45a6d7fdd6e3d5fd4b2dc178309eab8954",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 16384,
+        "id": "thedrummer_cydonia-24b-v4.2.0",
+        "identity": {
+          "architecture": "llama",
+          "display_name": "TheDrummer Cydonia 24B v4.2.0",
+          "max_context_length": 131072,
+          "model_id": "thedrummer_cydonia-24b-v4.2.0",
+          "parameters": "24B",
+          "publisher": "bartowski",
+          "quantization": "IQ3_M",
+          "quantization_bits": 3,
+          "selected_variant": null
+        }
+      },
+      "model_instance_id": "thedrummer_cydonia-24b-v4.2.0",
+      "model_metadata_error": null,
+      "progress": {
+        "completed_conditions": 19,
+        "raw_records": 81,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "3787d43e9e8a43b4b8f11adc9ad54e6ff046e1578c0b89b0f0ba301beacc9101",
+        "record_count": 81,
+        "record_ids_sha256": "074141a607a9ffdd013c29503c6231ea3b57f36b86c6548d60143ea99b5c959f",
+        "run_output_path": "results_thedrummer-cydonia-24b-v4-2-0.jsonl",
+        "run_output_sha256": "3787d43e9e8a43b4b8f11adc9ad54e6ff046e1578c0b89b0f0ba301beacc9101"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lmstudio"
+      },
+      "run_id": "6d887ab5ff9a4dccbcbec75ece3fe999",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "1ac9e695e290ee7a6652446d8c3f0b0f50807572638977ebac8a26f3c243baff"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-08T11:09:55.548390+00:00",
+      "status": "archived"
+    }
+  ],
+  "schema_version": 1
+}

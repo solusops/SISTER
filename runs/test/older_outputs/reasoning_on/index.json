@@ -1,0 +1,74 @@
+{
+  "runs": [
+    {
+      "config_fingerprint": "31a04214741b398318da96c9dc7232f5bee76d64fc871146e0157caeb167cabc",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "KeyboardInterrupt",
+      "finished_at": "2026-08-08T03:14:42.553777+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 22000,
+        "id": "openai/gpt-oss-20b",
+        "identity": {
+          "architecture": "gpt-oss",
+          "display_name": "GPT-OSS 20B",
+          "max_context_length": 131072,
+          "model_id": "openai/gpt-oss-20b",
+          "parameters": "20B",
+          "publisher": "openai",
+          "quantization": "MXFP4",
+          "quantization_bits": 4,
+          "selected_variant": "openai/gpt-oss-20b@mxfp4"
+        },
+        "reasoning_effort": "high"
+      },
+      "model_instance_id": "openai/gpt-oss-20b",
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "c9cb8efe29772fc52012a0758ae4a1d6082a714f4f3e7502f726abd52916c5f7"
+      },
+      "progress": {
+        "completed_conditions": 72,
+        "raw_records": 282,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "721d1e1dd486e5ce5243f51548739800574eb484f0a04f654c9aff7c77318688",
+        "record_count": 282,
+        "record_ids_sha256": "44555f97109a520900efadf38867851ff29483e61ceffff73ece1662608d6fb4",
+        "run_output_path": "results_openai-gpt-oss-20b.jsonl",
+        "run_output_sha256": "721d1e1dd486e5ce5243f51548739800574eb484f0a04f654c9aff7c77318688"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "9b183b2c0ee94a50856b1c1142b53c3b",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T19:07:28.522508+00:00",
+      "status": "stopped_by_user"
+    }
+  ],
+  "schema_version": 1
+}

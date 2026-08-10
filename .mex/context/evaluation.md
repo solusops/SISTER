@@ -66,7 +66,9 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 
 - Primary performance metric: [TO BE DETERMINED — populate after first implementation].
 - Supporting metrics and aggregation: [TO BE DETERMINED — populate after first implementation].
-- Result artifacts and storage location: the runner appends each raw generated
+- Result artifacts and storage location: the active flat root contains only
+  the six completed current-model files, their independent combined dataset,
+  and one index. The runner appends each raw generated
   response to `results/results_<model>.jsonl` and to
   `results/all_results.jsonl`, the independent combined dataset. Every JSONL
   line contains `model_id`, `model_name`, `parameters`, and `quant_file` as
@@ -95,7 +97,9 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   even where their own finish reason is `stop`. Before its continuation, use
   `--discard-context-overflow-attempts` to remove every one of those complete
   trajectories from both raw datasets and record the aggregate cleanup in the
-  single index.
+  single index. This cleanup was performed before Granite's completed active
+  result was finalized; its one remaining abandoned normal-stop intermediate
+  row was also removed, leaving 1,156 active raw rows.
 - The runner rejects any completion whose finish reason is not `stop` before
   it writes a raw record. This preserves immutable outputs without changing a
   model's prompt, sampling, or output ceiling; an affected run fails for
@@ -114,11 +118,11 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   disposable request under those same settings returned `stop`, 58 completion
   tokens, and zero API-reported reasoning tokens. Record the template identity
   before treating a full run as reproducible evidence.
-- The active Qwen run uses that verified custom template and the standard
-  16,384-context, single-slot LM Studio configuration. Its raw outputs are in
-  the flat `results/` root alongside the other model files, and its records
-  continue to show `finish_reason: stop` and zero API-reported reasoning
-  tokens.
+- The completed Qwen run uses that verified custom template, single-slot LM
+  Studio configuration, and the flat active root. After two 16,384-context
+  stops, its final continuation used 22,528 tokens; the index records every
+  seed and context segment. Its retained raw rows all have `finish_reason:
+  stop` and zero API-reported reasoning tokens.
 - The Qwen run stopped after 254 saved raw records and 64 completed conditions:
   `historical_fiction/13` in the full condition returned `finish_reason:
   length` at 16,220 completion tokens and 16,384 total tokens. The runner
@@ -150,6 +154,9 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   explicitly continued run changes its context window. Previous raw rows retain
   their historical window through the preceding segment; the run-level model
   context denotes the active setting.
+- Historical, partial, reasoning-mode, and diagnostic outputs are kept under
+  `runs/test/older_outputs/`; they are not entries in the active index or
+  combined dataset. Cydonia's 81-row partial is archived there separately.
 
 ## Boundaries
 

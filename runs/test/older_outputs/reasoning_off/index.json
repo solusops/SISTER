@@ -1,0 +1,349 @@
+{
+  "runs": [
+    {
+      "config_fingerprint": "c524c626492b8d61bd4344b42596b110aac80a78c5b4ec9e8a7c37505a0b9e18",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": null,
+      "finished_at": "2026-08-07T17:22:46.343010+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 65536,
+        "id": "openai/gpt-oss-20b",
+        "identity": {
+          "architecture": "gpt-oss",
+          "display_name": "GPT-OSS 20B",
+          "max_context_length": 131072,
+          "model_id": "openai/gpt-oss-20b",
+          "parameters": "20B",
+          "publisher": "openai",
+          "quantization": "MXFP4",
+          "quantization_bits": 4,
+          "selected_variant": "openai/gpt-oss-20b@mxfp4"
+        },
+        "reasoning_effort": null
+      },
+      "model_instance_id": "openai/gpt-oss-20b",
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "f35fb4a58ff7bbfeb533c977119114c64e162386549b68aa091125d02f25460b"
+      },
+      "progress": {
+        "completed_conditions": 320,
+        "raw_records": 1156,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "8fdc9afca15d6404909fe59637ab7ddd586b5ca8e9a4824210aeafb431b7b305",
+        "record_count": 1156,
+        "record_ids_sha256": "29816589015d3323ede55e809c34c9444d0989f724408bcbf484f3a83d569ce0",
+        "run_output_path": "results_openai-gpt-oss-20b.jsonl",
+        "run_output_sha256": "8fdc9afca15d6404909fe59637ab7ddd586b5ca8e9a4824210aeafb431b7b305"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "f223fa28253746b4b2bd250111225c15",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T10:55:28.287658+00:00",
+      "status": "completed"
+    },
+    {
+      "config_fingerprint": "3839ffbf08603bdd9230e754ab69a8967631bbd950eba076d1290ee2596ad367",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "Traceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 399, in _request_json\n    with request.urlopen(request_object, timeout=self.timeout) as response:\n         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 493, in open\n    response = meth(req, response)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 400: Bad Request\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 697, in execute_run\n    run_full(client, store, index, run, items, done, item, options)\n    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 538, in run_full\n    reply = client.chat(\n        run[\"model\"][\"id\"],\n        [{\"role\": \"system\", \"content\": SYSTEM_PROMPT}, {\"role\": \"user\", \"content\": item[\"full_instruction\"]}],\n        options,\n    )\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 453, in chat\n    response = self._request_json(\n        \"POST\", \"/chat/completions\", {\"model\": model, \"messages\": messages, **options}\n    )\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 403, in _request_json\n    raise RuntimeError(\n        f\"LM Studio returned HTTP {exc.code} for {base_url or self.base_url}{path}: {details}\"\n    ) from exc\nRuntimeError: LM Studio returned HTTP 400 for http://localhost:1234/v1/chat/completions: {\"error\":\"Model unloaded by user or API request.\"}\n",
+      "finished_at": "2026-08-07T17:54:54.348015+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 65536,
+        "id": "qwen/qwen3.5-9b",
+        "identity": {
+          "architecture": "qwen35",
+          "display_name": "Qwen3.5 9B",
+          "max_context_length": 262144,
+          "model_id": "qwen/qwen3.5-9b",
+          "parameters": "9B",
+          "publisher": "qwen",
+          "quantization": "Q8_0",
+          "quantization_bits": 8,
+          "selected_variant": "qwen/qwen3.5-9b@q8_0"
+        },
+        "reasoning_effort": null
+      },
+      "model_instance_id": "qwen/qwen3.5-9b",
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "f35fb4a58ff7bbfeb533c977119114c64e162386549b68aa091125d02f25460b"
+      },
+      "progress": {
+        "completed_conditions": 2,
+        "raw_records": 9,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "9e534b0b9bd7fd920f3626405830b0d70340a396f0fb59943cf54543974fc512",
+        "record_count": 9,
+        "record_ids_sha256": "02895a8e3d2329530641b5559c7e7b669d617397983546a6439d13938a678e34",
+        "run_output_path": "results_qwen-qwen3-5-9b.jsonl",
+        "run_output_sha256": "8c3a7c5d2baf8f9250cd58aacdf0313b441030a53c0597eb63c1ac0e8f605408"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "014605860baf4832932172598f245021",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T17:22:46.358406+00:00",
+      "status": "failed"
+    },
+    {
+      "config_fingerprint": "a5774ee2b15bb74af3fcc3222ae4b96f67589c937f1d0bb16391a9f52df2e7e8",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "Traceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 399, in _request_json\n    with request.urlopen(request_object, timeout=self.timeout) as response:\n         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 493, in open\n    response = meth(req, response)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 724, in execute_run\n    client.unload_model(instance_id)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 439, in unload_model\n    self._request_json(\n    ~~~~~~~~~~~~~~~~~~^\n        \"POST\", \"/models/unload\", {\"instance_id\": instance_id}, base_url=self.management_url\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 403, in _request_json\n    raise RuntimeError(\n        f\"LM Studio returned HTTP {exc.code} for {base_url or self.base_url}{path}: {details}\"\n    ) from exc\nRuntimeError: LM Studio returned HTTP 500 for http://localhost:1234/api/v1/models/unload: {\n  \"error\": {\n    \"message\": \"Engine protocol startup was aborted.\",\n    \"type\": \"internal_error\",\n    \"code\": \"unknown\",\n    \"param\": null\n  }\n}\n",
+      "finished_at": "2026-08-07T18:03:28.279819+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 32768,
+        "id": "google/gemma-4-26b-a4b-qat",
+        "identity": {
+          "architecture": "gemma4",
+          "display_name": "Gemma 4 26B A4B QAT",
+          "max_context_length": 262144,
+          "model_id": "google/gemma-4-26b-a4b-qat",
+          "parameters": "26B-A4B",
+          "publisher": "google",
+          "quantization": "Q4_0",
+          "quantization_bits": 4,
+          "selected_variant": "google/gemma-4-26b-a4b-qat@q4_0"
+        },
+        "reasoning_effort": null
+      },
+      "model_instance_id": "google/gemma-4-26b-a4b-qat",
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "f35fb4a58ff7bbfeb533c977119114c64e162386549b68aa091125d02f25460b"
+      },
+      "progress": {
+        "completed_conditions": 1,
+        "raw_records": 3,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "9c36d0ce3ca27ceb9fd81af9bbbc514ebfdf64ec07aa19dc1b76ae3d668c1929",
+        "record_count": 3,
+        "record_ids_sha256": "154c63be7b5bda6138182438b19b406a58f9dcd1de8fc10a14c0b214484ad95b",
+        "run_output_path": "results_google-gemma-4-26b-a4b-qat.jsonl",
+        "run_output_sha256": "6d1cb2d109ec7c6da58546a8e0a9fa638e3137ef0408892bf1c4d01764425db3"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "5a9be1b2fb844119ab99e6a7734d218b",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T17:54:54.363279+00:00",
+      "status": "unload_failed"
+    },
+    {
+      "config_fingerprint": "e6c26ed232eb2538cb9c86bc57a20d5e2f4eb64a9ce3fc68762d7d4829cdca3a",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "Traceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 399, in _request_json\n    with request.urlopen(request_object, timeout=self.timeout) as response:\n         ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 187, in urlopen\n    return opener.open(url, data, timeout)\n           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 493, in open\n    response = meth(req, response)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 602, in http_response\n    response = self.parent.error(\n        'http', request, response, code, msg, hdrs)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 531, in error\n    return self._call_chain(*args)\n           ~~~~~~~~~~~~~~~~^^^^^^^\n  File \"/usr/lib/python3.14/urllib/request.py\", line 464, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.14/urllib/request.py\", line 611, in http_error_default\n    raise HTTPError(req.full_url, code, msg, hdrs, fp)\nurllib.error.HTTPError: HTTP Error 500: Internal Server Error\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 687, in execute_run\n    instance_id = client.load_model(entry[\"id\"], entry[\"context_length\"])\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 427, in load_model\n    response = self._request_json(\n        \"POST\",\n    ...<2 lines>...\n        base_url=self.management_url,\n    )\n  File \"/mnt/alt_home/GitHub/Research/SISTER/SISTER/runs/run_experiment.py\", line 403, in _request_json\n    raise RuntimeError(\n        f\"LM Studio returned HTTP {exc.code} for {base_url or self.base_url}{path}: {details}\"\n    ) from exc\nRuntimeError: LM Studio returned HTTP 500 for http://localhost:1234/api/v1/models/load: {\n  \"error\": {\n    \"type\": \"model_load_failed\",\n    \"message\": \"Failed to load LLM 'mistral-7b-instruct-v0.2': Error: Engine protocol runtime llama-server for hTFoZMHmF0C42XTaklSBME1h exited before becoming healthy. exitCode=1, signal=null\"\n  }\n}\n",
+      "finished_at": "2026-08-07T18:03:36.957418+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 32768,
+        "id": "mistral-7b-instruct-v0.2",
+        "identity": {
+          "architecture": "llama",
+          "display_name": "Mistral 7B Instruct v0.2",
+          "max_context_length": 32768,
+          "model_id": "mistral-7b-instruct-v0.2",
+          "parameters": "7B",
+          "publisher": "TheBloke",
+          "quantization": "Q8_0",
+          "quantization_bits": 8,
+          "selected_variant": null
+        },
+        "reasoning_effort": null
+      },
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "f35fb4a58ff7bbfeb533c977119114c64e162386549b68aa091125d02f25460b"
+      },
+      "progress": {
+        "completed_conditions": 0,
+        "raw_records": 0,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "9c36d0ce3ca27ceb9fd81af9bbbc514ebfdf64ec07aa19dc1b76ae3d668c1929",
+        "record_count": 0,
+        "record_ids_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "run_output_path": "results_mistral-7b-instruct-v0-2.jsonl",
+        "run_output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "0b6816c515cf465c89e9d36fa82e880c",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T18:03:28.296519+00:00",
+      "status": "failed"
+    },
+    {
+      "config_fingerprint": "25d5e387bbe503bcf22b6a3390ff1bc7b769065d927d0beda0850d100c3987ab",
+      "dataset": {
+        "path": "benchmark_data.json",
+        "sha256": "16df9786951546f88d6fff56e48425fb5fefcb43661b3af65e24e4ec837a7071"
+      },
+      "error": "KeyboardInterrupt",
+      "finished_at": "2026-08-07T18:34:01.481441+00:00",
+      "generation": {
+        "seed": 12345,
+        "temperature": 0.8
+      },
+      "model": {
+        "context_length": 65536,
+        "id": "prism-ml/bonsai-27b",
+        "identity": {
+          "architecture": "qwen35",
+          "display_name": "Bonsai 27B",
+          "max_context_length": 262144,
+          "model_id": "prism-ml/bonsai-27b",
+          "parameters": "27B",
+          "publisher": "prism-ml",
+          "quantization": "Q1_0",
+          "quantization_bits": 1,
+          "selected_variant": "prism-ml/bonsai-27b@q1_0"
+        },
+        "reasoning_effort": null
+      },
+      "model_instance_id": "prism-ml/bonsai-27b",
+      "model_metadata_error": null,
+      "model_plan": {
+        "name": "models.json",
+        "sha256": "f35fb4a58ff7bbfeb533c977119114c64e162386549b68aa091125d02f25460b"
+      },
+      "progress": {
+        "completed_conditions": 3,
+        "raw_records": 14,
+        "total_conditions": 320
+      },
+      "proof": {
+        "all_output_path": "all_results.jsonl",
+        "all_output_sha256_at_update": "ae6840427dc7230caf57efce3c6e2fb0f0714b323ff11f7e5cc64953e61b27e3",
+        "record_count": 14,
+        "record_ids_sha256": "7db205206aae016acb4fff0f7ef565161903296b3bf17f86c5dc5a0bf098e0ed",
+        "run_output_path": "results_prism-ml-bonsai-27b.jsonl",
+        "run_output_sha256": "979fced22fa94b84e87bee7dcd8b3c36633415b1f7445b844e6cf31b86a5f707"
+      },
+      "protocol": {
+        "conditions": [
+          "full",
+          "sharded"
+        ],
+        "sha256": "31a58517d8b3f4b70ad5f2ab5f22da1f725ed1a103c871397159827d6f1a8267",
+        "system_prompt": "You are a skilled creative writer. Follow the user's instructions for the story precisely, including any exact phrases, constraints, or stylistic requirements."
+      },
+      "provider": {
+        "base_url": "http://localhost:1234/v1",
+        "management_url": null,
+        "name": "lm-studio"
+      },
+      "run_id": "a2295308b7d1431c887913eaf2cc7c3b",
+      "runner": {
+        "name": "run_experiment.py",
+        "sha256": "a625949952e96ff406f3ec916661db6bf7e023d25edbeabd2af817e2ad7fb799"
+      },
+      "schema_version": 1,
+      "started_at": "2026-08-07T18:03:36.970197+00:00",
+      "status": "stopped_by_user"
+    }
+  ],
+  "schema_version": 1
+}
