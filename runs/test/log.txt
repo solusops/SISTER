@@ -1,0 +1,50 @@
+Model-run notes
+===============
+
+Retained completed models
+-------------------------
+
+GPT-OSS 20B
+- Fastest model in this set.
+- Reasoning could not be reliably disabled: LM Studio exposed low, medium, and
+  high rather than off. Treat all collected GPT-OSS outputs as reasoning-enabled.
+
+Gemma 4 12B QAT
+- Thinking controls were inconsistent or ignored through the UI/API.
+- The successful run used no explicit thinking field and a zero thinking budget.
+
+Llama 3.1 8B
+- No result-data failure.
+- Sustained inference required monitoring GPU thermals; the final 16K run is clean.
+
+Mistral 7B Instruct v0.3
+- The earlier target/version and 32K KV-cache planning caused confusion.
+- The final v0.3 Q4_K_M run used 16K and completed cleanly.
+
+Granite 4 H Tiny
+- Fifteen 16K context-length stops contaminated sharded trajectories.
+- Removed 87 rows across 14 affected trajectories before continuation.
+- A later overflow retried with seed 12346; one abandoned normal-stop orphan
+  row was also removed.
+- Final active result has 1,156 clean rows.
+
+Qwen 3.5 9B
+- Default behavior attempted hidden thinking despite normal controls.
+- A custom no-thinking template plus zero thinking budget produced normal output.
+- Two 16K context-length stops required controlled continuation.
+- The final segment used a 22,528-token context window and completed cleanly.
+
+Archived or excluded models
+---------------------------
+
+Cydonia 24B
+- Approximately 7 tokens/second and the partial had missing model metadata.
+- Archived as a partial run.
+
+Bonsai 27B
+- Slow and emitted reasoning tokens despite a zero thinking budget.
+- Excluded from the active comparison.
+
+Other archives
+- Gemma 26B, Liquid, older reasoning-mode attempts, and native-API Qwen tests
+  are diagnostic or non-comparable artifacts in test/older_outputs.
