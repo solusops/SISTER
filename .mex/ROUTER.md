@@ -48,8 +48,13 @@ Then read this file fully before doing anything else in this session.
   and an independent combined JSONL dataset; `results/index.json` records
   provenance and progress. `--resume` is reserved for a known interrupted run
   in the active results directory.
-  Previous runs are isolated by reasoning mode under `runs/results/`.
+  Historical, partial, reasoning-mode, and diagnostic outputs are isolated
+  under `runs/test/older_outputs/`.
 - Do not use `runs/context error/` as run history.
+- The root README is publication-facing: it states the research question,
+  distinguishes active results from archival diagnostics, links operational
+  run instructions, and provides the current manuscript citation. `CITATION.cff`
+  mirrors the title and author metadata for repository citation tools.
 
 **Not yet built:**
 - The workflow that transfers verified results into paper text, figures, or tables.

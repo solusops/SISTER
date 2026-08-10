@@ -18,7 +18,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: when verified evaluation results are being transferred into the paper
 grounds_to: []
-last_updated: "2026-08-07"
+last_updated: "2026-08-10"
 ---
 
 # Architecture
@@ -27,31 +27,35 @@ last_updated: "2026-08-07"
 
 A dataset is supplied to a Python evaluation workflow.
 The workflow evaluates whether LLM performance degrades across multi-turn conversations.
-The evaluator entry point is `runs/run_experiment.py`; it uses LM Studio's
-model interface and a tracked `runs/models.json` sequence with per-model
-context lengths. Every generated raw response is written immediately to a
-self-contained `results/<run-id>/outputs.json` document and to the matching
-run group in `results/all.json`.
-`results/index.json` connects the run datasets and records proof metadata for
-review and exact resume.
+The evaluator entry point is `runs/run_experiment.py`; it supports explicit
+model selection through LM Studio or Ollama, rather than a fixed model queue.
+Every generated raw response is written immediately to a flat per-model JSONL
+file and to `runs/results/all_results.jsonl`.
+`runs/results/index.json` records provenance, progress, generation segments,
+context segments, and integrity metadata for the active dataset.
 Collaborators use verified results while editing the modular LaTeX paper files.
 The existing Makefile or `build.ps1` compiles `main.tex` and its sections into the paper PDF.
 
 ## Key Components
 
 - **Python evaluation workflow** — `runs/run_experiment.py` runs dataset-based multi-turn LLM evaluations.
-- **Evaluation dataset** — `runs/benchmark_data.json` supplies 40 creative-writing tasks across romance and mystery.
-- **Result artifacts** — one run directory per model/configuration,
-  `results/all.json` for independent analysis across all runs, and
-  `results/index.json` for run provenance, progress, compact record digests,
-  and hashes.
+- **Evaluation dataset** — `runs/benchmark_data.json` supplies 160
+  creative-writing tasks across six genres in full-instruction and sharded
+  multi-turn conditions.
+- **Result artifacts** — one flat JSONL file per active model configuration,
+  `runs/results/all_results.jsonl` for independent analysis across all active
+  runs, and `runs/results/index.json` for provenance, progress, compact record
+  digests, and integrity metadata. Superseded and diagnostic outputs are
+  isolated under `runs/test/older_outputs/`.
 - **LaTeX paper workspace** — `main.tex`, `sections/`, `figures/`, `tables/`, and `macros/` hold the collaborative manuscript.
 - **Paper build pipeline** — `Makefile` and `build.ps1` compile the LaTeX source into a PDF.
 
 ## External Dependencies
 
 - **Python runtime** — runs the evaluator; the supported version is [TO BE DETERMINED].
-- **LLM inference access** — LM Studio provides model listing and chat completion over its OpenAI-compatible HTTP API; the endpoint and optional bearer token are configurable.
+- **LLM inference access** — LM Studio and Ollama provide local model listing
+  and chat completion over OpenAI-compatible HTTP APIs; endpoints are
+  configurable.
 - **LaTeX distribution with `latexmk`** — compiles the paper; the supported distribution and version are [TO BE DETERMINED].
 - **Git repository** — supports collaboration and review of Python, results, and `.tex` changes.
 
