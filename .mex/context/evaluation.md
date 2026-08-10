@@ -48,9 +48,9 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 - Active run policy: every explicit model selection uses 16,384 context tokens
   and sends no `reasoning_effort` field. Keep result sets from different
   reasoning modes separate: the earlier partial high-reasoning attempt is
-  archived in `runs/results/reasoning_on/`, while non-reasoning baselines are
-  archived in `runs/results/reasoning_off/`; the brief unsupported `none`
-  attempt is isolated in `runs/results/reasoning_none/`. The fresh
+  archived in `runs/test/older_outputs/reasoning_on/`, while non-reasoning baselines are
+  archived in `runs/test/older_outputs/reasoning_off/`; the brief unsupported `none`
+  attempt is isolated in `runs/test/older_outputs/reasoning_none/`. The fresh
   non-reasoning sequence writes to `runs/results/`.
 - Conversation prompts, turn count, and state handling: The `full` condition
   sends the complete instruction in one user turn. The `sharded` condition
