@@ -1,20 +1,19 @@
 # SISTER evaluation runs
 
-This directory runs the fixed 160-item creative-writing benchmark against one
-explicit local model at a time. It requires Python 3.10+ only; the evaluator
-uses the standard library.
+Run commands from the repository root. This evaluator runs the fixed 160-item
+creative-writing benchmark against explicitly selected local models. It
+requires Python 3.10+ only.
 
 ## Run a model
 
-Start either LM Studio's local server or Ollama, then list the exact installed
-model identifier:
+Start LM Studio or Ollama, then list the exact installed model identifier:
 
 ```bash
 python3 runs/run_experiment.py --backend lmstudio --list-models
 python3 runs/run_experiment.py --backend ollama --list-models
 ```
 
-Run one model with its exact identifier or tag:
+Run one exact model ID or tag:
 
 ```bash
 python3 runs/run_experiment.py --backend lmstudio --models publisher/model-id
@@ -22,15 +21,18 @@ python3 runs/run_experiment.py --backend ollama --models model:tag
 ```
 
 The normal run uses a 16,384-token context window, temperature 0.8, seed
-12345, and one model at a time. The LM Studio run applies the verified local
-load settings: one parallel slot, Flash Attention, GPU KV cache, and the
-configured evaluation batches.
+12345, and one model at a time. LM Studio uses one parallel slot, Flash
+Attention, GPU KV cache, and the verified evaluation batch settings. It sends
+`reasoning: off` only when the selected model explicitly supports that option;
+otherwise it omits that unsupported field and uses the zero thinking budget.
 
 Use a small smoke test before a new full run:
 
 ```bash
 python3 runs/run_experiment.py --backend lmstudio --models publisher/model-id --limit 3
 ```
+
+Set `OLLAMA_BASE_URL` when Ollama is not at `http://localhost:11434`.
 
 ## Continue a known run
 
@@ -75,7 +77,9 @@ When collaborators complete distinct models independently, merge their result
 roots into a fresh destination:
 
 ```bash
-python3 runs/merge_results.py collaborator_a/results collaborator_b/results --output merged_results
+python3 runs/merge_results.py \
+  --output merged_results \
+  collaborator_a/results collaborator_b/results
 ```
 
 The merger validates duplicate models and record IDs, each source's raw files,
