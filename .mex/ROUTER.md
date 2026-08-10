@@ -29,7 +29,8 @@ Then read this file fully before doing anything else in this session.
 
 **Working:**
 - The repository retains an editable manuscript source under `paper/`, alongside
-  the study materials and active generation data.
+  the study materials and active generation data. GitHub Actions compiles it as
+  a downloadable artifact without committing generated PDFs.
 - As of 2026-08-10, the active flat `runs/results/` dataset contains exactly
   six completed models: GPT-OSS 20B, Gemma 4 12B QAT, Llama 3.1 8B, Granite 4
   H Tiny, Mistral 7B Instruct v0.3, and Qwen 3.5 9B Q4_K_M. Each has 320 final

@@ -33,6 +33,9 @@ last_updated: "2026-08-08"
 2. No Python package installation is required for the runner.
 3. Configure either LM Studio's local server or Ollama with the desired model.
 
+The manuscript source is compiled by the GitHub Actions workflow; no local PDF
+build setup is required for this repository.
+
 ## Environment Variables
 
 - LM Studio endpoint: `LM_STUDIO_BASE_URL` (defaults to

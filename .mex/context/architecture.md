@@ -34,8 +34,9 @@ file and to `runs/results/all_results.jsonl`.
 `runs/results/index.json` records provenance, progress, generation segments,
 context segments, and integrity metadata for the active dataset.
 Collaborators use verified results while editing the manuscript source retained
-under `paper/`. The repository intentionally does not maintain a manuscript
-build pipeline or compiled PDF.
+under `paper/`. GitHub Actions compiles `paper/main.tex` and publishes the PDF
+as a workflow artifact; the repository does not commit generated PDFs or keep
+local build wrappers.
 
 ## Key Components
 
@@ -64,4 +65,5 @@ build pipeline or compiled PDF.
 - No product UI, production service, or user-facing application.
 - No database or persistent service layer has been selected; this is [TO BE DETERMINED].
 - No production deployment or over-engineered platform architecture.
-- No PDF build or document-generation workflow is maintained in this repository.
+- No committed PDF output or local document-generation wrapper is maintained in
+  this repository.
