@@ -55,6 +55,9 @@ Then read this file fully before doing anything else in this session.
   distinguishes active results from archival diagnostics, links operational
   run instructions, and provides the current manuscript citation. `CITATION.cff`
   mirrors the title and author metadata for repository citation tools.
+- Root-level `evaluations/` is reserved for future derived scoring. It remains
+  intentionally empty except for its README until the protocol is decided;
+  model generations remain under `runs/results/`.
 
 **Not yet built:**
 - The workflow that transfers verified results into paper text, figures, or tables.

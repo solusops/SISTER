@@ -71,6 +71,10 @@ not end with `stop`; it never records a context-truncated response as evidence.
 Historical, partial, reasoning-mode, and diagnostic outputs belong under
 `runs/test/older_outputs/`, never in the active flat result root.
 
+Derived scoring and annotations are intentionally kept outside this directory
+in the root-level [`evaluations/`](../evaluations/) folder. They must reference
+raw `record_id` values and never modify generation JSONL files.
+
 ## Merge collaborator outputs
 
 When collaborators complete distinct models independently, merge their result

@@ -166,3 +166,5 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
 - Treat raw results as immutable evidence. Future scoring or annotation writes
   separate derived artifacts and never overwrites the per-model JSONL file or
   `all_results.jsonl`.
+- Reserve the root-level `evaluations/` directory for those derived artifacts.
+  It contains only an orientation README until the scoring protocol is decided.
