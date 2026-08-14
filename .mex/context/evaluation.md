@@ -24,7 +24,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: when transferring verified evaluation results into the paper
 grounds_to: []
-last_updated: "2026-08-14"
+last_updated: "2026-08-15"
 ---
 
 # Evaluation
@@ -125,6 +125,19 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   native rows, 42 retained long rows, and 12 repairs. The original 784-row
   `scores_auto.jsonl` remains historical evidence; its three auto/long
   overlaps are not active. Sampling and any canonical merge remain deferred.
+- Matched pairwise evaluator validation uses only the fixed blind 30-pair
+  sample. `evaluations/human_validation/` contains a sanitized primary-order
+  case JSONL and an exact A/B-swapped JSONL, each with 30 cases and 60
+  responses; the allowed fields are only case ID, instruction, atomic
+  constraints, Response A, and Response B. Fresh isolated model contexts
+  judged each pass, and both 30-row outputs have separate SHA-256 freeze
+  receipts. Translating reversed labels back to primary orientation yielded
+  directional consistency of 76.7% for constraint following and 83.3% for
+  creative quality, with exact five-level consistency of 50.0% and 53.3%.
+  No human annotation export is in the repository, so no human-model estimate
+  is reported; the CLI will read such an export only after both freezes exist.
+  The manifest does not recover a confident development/pilot versus held-out
+  boundary, so do not retrospectively call the sample untouched validation.
 - Batch-level extraction quality is uneven: one extraction batch (covering
   `romance_011`–`020` and `science_fiction_001`–`004`) had 5 distinct defects
   caught only by human spot-check, not by mechanical validation — see
@@ -141,6 +154,13 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   Wilcoxon signed-rank, Cohen's d_z, win/tie/loss rates, and the
   instruction-loss vs. creative-degradation decomposition are designed but
   not implemented; populate once `evaluations/scores.jsonl` is complete].
+- Pairwise validation keeps categorical choices authoritative. Its
+  `ordinal_model_judgments.jsonl` maps A clearly/slightly, Tie, and B
+  slightly/clearly to -2, -1, 0, +1, +2 only for analysis. When a valid human
+  export becomes available, report exact and directional agreement, quadratic
+  weighted Cohen's kappa, collapsed A/Tie/B Cohen's kappa, mean absolute
+  ordinal disagreement, and opposite-direction rate separately for
+  constraints and creative quality; never tune the judge against those labels.
 - Result artifacts and storage location: the active flat root contains only
   the six completed current-model files, their independent combined dataset,
   and one index. The runner appends each raw generated

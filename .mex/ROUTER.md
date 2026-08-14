@@ -18,7 +18,7 @@ edges:
     condition: when starting any task and looking for a repeatable workflow
   - target: patterns/judge-and-merge-scores.md
     condition: when the judge harness, its red persistence tests, or merging scored records is the task
-last_updated: "2026-08-14"
+last_updated: "2026-08-15"
 ---
 
 # Session Bootstrap
@@ -124,6 +124,17 @@ Then read this file fully before doing anything else in this session.
   native rows that omitted their final supplied constraint and four early long
   rows with non-canonical quality fields. No score aggregation, sampling, or
   canonical merge has been performed.
+- Matched pairwise evaluator validation now has frozen primary and
+  reversed-order model passes over the existing blind 30-pair sample (60
+  responses). `evaluations/human_validation/` contains both sanitized case
+  files, both 30-row model-judgment files and SHA-256 receipts, an
+  ordinal-analysis-only representation, position consistency, and a
+  methodology/results report. After translating the reversed labels back to
+  primary A/B orientation, directional consistency is 76.7% for constraint
+  following and 83.3% for creative quality (80.0% across 60 decisions), with
+  12 directional changes listed in the artifact. No human annotation export
+  exists in this repository, so human-model agreement, kappa, a disagreement
+  table, and any claim of held-out validation are deliberately absent.
 - The dataset is also published independently on Hugging Face:
   `runs/BENCHMARK.md` and `runs/results/README.md` document the two
   artifacts (`benchmark_data.json`, `results/`), and `runs/hf_upload/`
@@ -137,7 +148,8 @@ Then read this file fully before doing anything else in this session.
 - Qualitative sampling of the structurally valid active score pool, followed
   by an explicit decision on the canonical merge composition (including the
   46 long outputs); no `evaluations/scores.jsonl` exists yet.
-- Pairwise blind evaluation, and the statistics/analysis layer over the
+- Human-model agreement statistics and disagreement analysis for the pairwise
+  sample, pending a human annotation export; pointwise-score statistics over
   merged scores (paired deltas, Wilcoxon, Cohen's d_z, the instruction-loss
   vs. creative-degradation decomposition).
 - The transfer of verified results into manuscript text, figures, or tables.
@@ -161,6 +173,7 @@ Then read this file fully before doing anything else in this session.
 | Adding or editing derived constraint/evaluation records | `patterns/derived-evaluation.md` |
 | Diagnosing a failed or stuck evaluation run | `patterns/debug-evaluation-run.md` |
 | Running or resuming judge scoring, or merging automated/manual score exports | `patterns/judge-and-merge-scores.md` |
+| Reproducing the 30-pair evaluator-validation pass or analyzing a supplied human export | `patterns/pairwise-evaluator-validation.md` |
 | Any specific task | Check `patterns/INDEX.md` for a matching pattern |
 
 ## Behavioural Contract

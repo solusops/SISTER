@@ -16,7 +16,7 @@ edges:
   - target: patterns/update-paper-results.md
     condition: once a derived score is verified and ready to cite in the manuscript
 grounds_to: []
-last_updated: "2026-08-14"
+last_updated: "2026-08-15"
 ---
 
 # Derived Evaluation
@@ -24,6 +24,14 @@ last_updated: "2026-08-14"
 ## Context
 
 `evaluations/` holds derived annotation and scoring artifacts, kept strictly separate from the immutable generation evidence in `runs/results/` and the benchmark definition in `runs/benchmark_data.json`. `constraints.jsonl` (atomic constraints extracted from all 160 tasks) and `constraint_schema.json` (its taxonomy, extraction method, and validation status) are complete — see `evaluations/README.md`. Judge scoring is partially run — see `patterns/judge-and-merge-scores.md` for the current split between `scores_auto.jsonl` (784 records scored ad hoc) and a manual-scoring tool for the remainder. There is no reusable persistence/validation module; a prior parallel attempt was removed as failed work. Pairwise blind evaluation and the statistics/analysis layer are not yet built.
+
+### Current correction (2026-08-15)
+
+A distinct matched 30-pair evaluator-validation workflow now lives under
+`evaluations/human_validation/`; follow
+`patterns/pairwise-evaluator-validation.md` for its blinding, freeze, and
+post-freeze human-comparison contract. The earlier sentence refers only to
+the former project state and must not be used as current guidance.
 
 ## Steps
 
