@@ -17,7 +17,7 @@ edges:
   - target: patterns/run-evaluation.md
     condition: when setup is complete and an evaluation run is being executed
 grounds_to: []
-last_updated: "2026-08-08"
+last_updated: "2026-08-14"
 ---
 
 # Setup
@@ -29,8 +29,8 @@ last_updated: "2026-08-08"
 
 ## First-time Setup
 
-1. Clone or open the repository and confirm the Python environment: [TO BE DETERMINED].
-2. No Python package installation is required for the runner.
+1. Clone or open the repository and confirm `python3 --version` reports 3.10+. No virtualenv or requirements file exists — the runner is stdlib-only (see `context/stack.md`).
+2. No Python package installation is required for the runner. `runs/hf_upload/` (Hugging Face publishing only, not needed to run evaluations) additionally requires `datasets` and `huggingface_hub`.
 3. Configure either LM Studio's local server or Ollama with the desired model.
 
 The manuscript source is compiled by the GitHub Actions workflow; no local PDF
@@ -42,8 +42,12 @@ build setup is required for this repository.
   `http://localhost:1234/v1`). Optional bearer token:
   `LM_STUDIO_API_KEY` (defaults to `lm-studio`).
 - Ollama endpoint: `OLLAMA_BASE_URL` (defaults to `http://localhost:11434`).
-- Dataset location or identifier: [TO BE DETERMINED].
-- Evaluation configuration/output location: [TO BE DETERMINED].
+- Dataset location: `runs/benchmark_data.json`, resolved by the runner
+  relative to its own file location — it must stay next to
+  `run_experiment.py` unless the `DATA_PATH` constant is changed.
+- Evaluation output location: `--output results` (default) writes into
+  `runs/results/` — `results_<model>.jsonl` per model, `all_results.jsonl`
+  combined, `index.json` as the single status/provenance file.
 
 ## Common Commands
 

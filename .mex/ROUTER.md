@@ -16,7 +16,7 @@ edges:
     condition: when working on datasets, models, multi-turn protocols, metrics, or result artifacts
   - target: patterns/INDEX.md
     condition: when starting any task and looking for a repeatable workflow
-last_updated: "2026-08-10"
+last_updated: "2026-08-14"
 ---
 
 # Session Bootstrap
@@ -56,13 +56,22 @@ Then read this file fully before doing anything else in this session.
   distinguishes active results from archival diagnostics, links operational
   run instructions, and provides the current manuscript citation. `CITATION.cff`
   mirrors the title and author metadata for repository citation tools.
-- Root-level `evaluations/` is reserved for future derived scoring. It remains
-  intentionally empty except for its README until the protocol is decided;
-  model generations remain under `runs/results/`.
+- Root-level `evaluations/` now holds real derived-annotation work:
+  `constraints.jsonl` (one atomic-constraint record per `story_id`, extracted
+  from all 160 `runs/benchmark_data.json` tasks) and `constraint_schema.json`
+  (its taxonomy and extraction provenance). It still references generation
+  `record_id`s rather than duplicating them; model generations remain under
+  `runs/results/`.
+- The dataset is also published independently on Hugging Face:
+  `runs/BENCHMARK.md` and `runs/results/README.md` document the two
+  artifacts (`benchmark_data.json`, `results/`), and `runs/hf_upload/`
+  (`push_benchmark.py`, `push_generations.py`) pushes them to the separate
+  `sister-benchmark` and `sister-benchmark-generations` Hub repos.
 
 **Not yet built:**
-- The scoring workflow and the transfer of verified results into manuscript text,
-  figures, or tables.
+- The judge harness (constraint adherence + quality scoring), pairwise blind
+  evaluation, and the statistics/analysis layer over `evaluations/constraints.jsonl`.
+- The transfer of verified results into manuscript text, figures, or tables.
 
 **Known issues:**
 - LM Studio model IDs must be obtained from the running server; UI display names may be truncated or differ from API IDs.
@@ -80,6 +89,8 @@ Then read this file fully before doing anything else in this session.
 | Working on datasets, protocols, metrics, or result artifacts | `context/evaluation.md` |
 | Running a dataset-based multi-turn evaluation | `patterns/run-evaluation.md` |
 | Updating the paper with verified results | `patterns/update-paper-results.md` |
+| Adding or editing derived constraint/evaluation records | `patterns/derived-evaluation.md` |
+| Diagnosing a failed or stuck evaluation run | `patterns/debug-evaluation-run.md` |
 | Any specific task | Check `patterns/INDEX.md` for a matching pattern |
 
 ## Behavioural Contract

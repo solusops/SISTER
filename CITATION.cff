@@ -2,6 +2,7 @@ cff-version: 1.2.0
 message: "If you use this repository or its materials, please cite it as below."
 title: "The Effects of Incremental Instruction Delivery on Language-Model Creative Writing"
 type: software
+license: CC-BY-4.0
 authors:
   - family-names: Singh
     given-names: Anshuman

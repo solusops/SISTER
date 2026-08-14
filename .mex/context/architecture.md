@@ -17,8 +17,10 @@ edges:
     condition: when executing or reproducing an evaluation run
   - target: patterns/update-paper-results.md
     condition: when verified evaluation results are being transferred into the paper
+  - target: patterns/derived-evaluation.md
+    condition: when adding or editing derived constraint/evaluation records under evaluations/
 grounds_to: []
-last_updated: "2026-08-10"
+last_updated: "2026-08-14"
 ---
 
 # Architecture
@@ -51,10 +53,21 @@ local build wrappers.
   isolated under `runs/test/older_outputs/`.
 - **Manuscript source** — `paper/` holds the editable draft, section files,
   figures, tables, macros, and bibliography.
+- **Derived evaluation** — `evaluations/constraints.jsonl` and
+  `constraint_schema.json` hold atomic creative-writing constraints extracted
+  from `runs/benchmark_data.json`, one record per `story_id`, referencing
+  generation `record_id`s rather than duplicating raw text. The judge harness
+  and statistics layer that will consume these are not yet built.
+- **Hugging Face publishing** — `runs/hf_upload/push_benchmark.py` and
+  `push_generations.py` push the benchmark and the generation evidence to two
+  independently versioned Hub dataset repos (`sister-benchmark`,
+  `sister-benchmark-generations`); documented in `runs/BENCHMARK.md` and
+  `runs/results/README.md`.
 
 ## External Dependencies
 
-- **Python runtime** — runs the evaluator; the supported version is [TO BE DETERMINED].
+- **Python 3.10+ runtime** — runs the evaluator, merger, and dashboard using
+  only the standard library.
 - **LLM inference access** — LM Studio and Ollama provide local model listing
   and chat completion over OpenAI-compatible HTTP APIs; endpoints are
   configurable.

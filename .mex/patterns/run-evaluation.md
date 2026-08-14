@@ -17,8 +17,10 @@ edges:
     condition: when the evaluation's connection to result artifacts or paper updates is involved
   - target: context/setup.md
     condition: when the runtime or dependencies are not yet configured
+  - target: patterns/debug-evaluation-run.md
+    condition: when a run fails, stalls, or produces suspicious output
 grounds_to: []
-last_updated: "2026-08-10"
+last_updated: "2026-08-14"
 ---
 
 # Run Evaluation
