@@ -16,6 +16,8 @@ edges:
     condition: when working on datasets, models, multi-turn protocols, metrics, or result artifacts
   - target: patterns/INDEX.md
     condition: when starting any task and looking for a repeatable workflow
+  - target: patterns/judge-and-merge-scores.md
+    condition: when the judge harness, its red persistence tests, or merging scored records is the task
 last_updated: "2026-08-14"
 ---
 
@@ -56,12 +58,72 @@ Then read this file fully before doing anything else in this session.
   distinguishes active results from archival diagnostics, links operational
   run instructions, and provides the current manuscript citation. `CITATION.cff`
   mirrors the title and author metadata for repository citation tools.
-- Root-level `evaluations/` now holds real derived-annotation work:
+- Root-level `evaluations/` now holds real derived-annotation and scoring work:
   `constraints.jsonl` (one atomic-constraint record per `story_id`, extracted
-  from all 160 `runs/benchmark_data.json` tasks) and `constraint_schema.json`
-  (its taxonomy and extraction provenance). It still references generation
-  `record_id`s rather than duplicating them; model generations remain under
-  `runs/results/`.
+  from all 160 `runs/benchmark_data.json` tasks, 1,278 constraints total) and
+  `constraint_schema.json` (its taxonomy and extraction provenance, including
+  a batch-6 extraction defect found and fixed via a 36-story human spot-check
+  — see that file's `human_spot_check` field before trusting unspotchecked
+  records). It still references generation `record_id`s rather than
+  duplicating them; model generations remain under `runs/results/`.
+- A judge protocol is designed and partially executed. `judge_config.json`
+  defines the rubric (per-constraint adherence 0/0.5/1 + reason; 5-dimension
+  creative-quality score 1–5 with no reason field, `characterization`
+  nullable). A prior parallel attempt at a persistence/validation module
+  (`evaluations/run_judge_harness.py` + `test_run_judge_harness.py`) was
+  removed as failed work on 2026-08-14 — do not recreate those exact
+  filenames expecting prior context; there is no persistence-layer code to
+  build on, start fresh if one is wanted.
+- Automated judging ran ad hoc via a Claude Code Workflow: 784 of 1,874 eligible final records are scored, mechanically
+  validated (0 structural errors — exact constraint-ID coverage, valid score
+  ranges, consistent `characterization`/`characterization_na`), and saved to
+  `evaluations/scores_auto.jsonl`. This run never completed an LLM-based
+  verify pass (0/240 verify-stage calls ever finished across two run
+  attempts) — validity rests entirely on the mechanical check, which is
+  sufficient but worth knowing.
+- 46 final records were excluded from automated judging before scoring
+  (>10,000 characters, overwhelmingly `qwen/qwen3.5-9b` sharded — the same
+  model that needed a context-length increase during generation) and saved
+  to `evaluations/excluded_for_manual_annotation.jsonl` for the same reason:
+  automated judge batches containing them risked degraded judgment quality.
+- The remaining 1,093 unscored records plus those 46 excluded ones (1,139
+  total) were routed to manual human scoring because the automated judging
+  run exhausted its API/agent budget partway through. A self-contained
+  scoring web tool was built and published as a Claude Artifact:
+  **https://claude.ai/code/artifact/edd9fbb2-2942-404d-8719-e1fd80f77b7f**
+  (title "SISTER Manual Scorer"). Its HTML source (with all 1,139 records'
+  text/constraints embedded, ~5.3 MB) lives only in that session's temp
+  scratchpad, not in this repo — it is not recoverable from the repo alone;
+  regenerate from `evaluations/constraints.jsonl` +
+  `runs/results/all_results.jsonl` (final records not present in
+  `scores_auto.jsonl` or `excluded_for_manual_annotation.jsonl`) if needed
+  again. Multiple people may export partial JSONL from that tool; merging
+  multiple exports requires checking for the same `record_id` scored
+  differently across exports and flagging conflicts rather than silently
+  picking one — see `patterns/judge-and-merge-scores.md`.
+- On 2026-08-14, native Codex judging completed the 1,093 non-outlier,
+  not-already-scored final records in 137 fresh, blinded `gpt-5.6-terra`
+  medium-reasoning batches. The batch inputs are under
+  `evaluations/native_judge_batches/` and the corresponding append-only
+  candidate outputs are under `evaluations/native_judge_scores/` (1,093 rows).
+  The 46 long-output records remained excluded; three that also occur in
+  `scores_auto.jsonl` must be excluded from any future canonical merge.
+  Only batch/file and row-count completion checks have run so far; structural
+  validation and sampling remain explicitly deferred.
+- The 46 long outputs were subsequently judged in a separate one-record-per-
+  worker pass using fresh `gpt-5.6-sol` high-reasoning contexts. Its 46
+  candidate rows live in `evaluations/native_judge_long_scores/`; they remain
+  separate from the non-outlier candidates and from any future canonical merge
+  pending the same validation/sampling review.
+- A full active-pool structural check has now passed: 1,920 final records have
+  exactly one active score (781 non-overlapping legacy automatic rows, 1,085
+  valid native rows, 42 valid long rows, and 12 strict one-record repairs).
+  The three historical auto/long overlaps are excluded only from the active
+  pool via `evaluations/scores_auto_nonoverlap.jsonl`; the original
+  `scores_auto.jsonl` remains preserved. The repair pass corrected eight
+  native rows that omitted their final supplied constraint and four early long
+  rows with non-canonical quality fields. No score aggregation, sampling, or
+  canonical merge has been performed.
 - The dataset is also published independently on Hugging Face:
   `runs/BENCHMARK.md` and `runs/results/README.md` document the two
   artifacts (`benchmark_data.json`, `results/`), and `runs/hf_upload/`
@@ -69,8 +131,15 @@ Then read this file fully before doing anything else in this session.
   `sister-benchmark` and `sister-benchmark-generations` Hub repos.
 
 **Not yet built:**
-- The judge harness (constraint adherence + quality scoring), pairwise blind
-  evaluation, and the statistics/analysis layer over `evaluations/constraints.jsonl`.
+- A judging persistence/validation module (a prior parallel attempt was
+  removed as failed work — see above). Needed before running further
+  automated judging in a repeatable way.
+- Qualitative sampling of the structurally valid active score pool, followed
+  by an explicit decision on the canonical merge composition (including the
+  46 long outputs); no `evaluations/scores.jsonl` exists yet.
+- Pairwise blind evaluation, and the statistics/analysis layer over the
+  merged scores (paired deltas, Wilcoxon, Cohen's d_z, the instruction-loss
+  vs. creative-degradation decomposition).
 - The transfer of verified results into manuscript text, figures, or tables.
 
 **Known issues:**
@@ -91,6 +160,7 @@ Then read this file fully before doing anything else in this session.
 | Updating the paper with verified results | `patterns/update-paper-results.md` |
 | Adding or editing derived constraint/evaluation records | `patterns/derived-evaluation.md` |
 | Diagnosing a failed or stuck evaluation run | `patterns/debug-evaluation-run.md` |
+| Running or resuming judge scoring, or merging automated/manual score exports | `patterns/judge-and-merge-scores.md` |
 | Any specific task | Check `patterns/INDEX.md` for a matching pattern |
 
 ## Behavioural Contract

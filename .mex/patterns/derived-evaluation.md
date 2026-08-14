@@ -11,6 +11,8 @@ edges:
     condition: when checking the dataset/protocol contract a derived record must stay consistent with
   - target: context/architecture.md
     condition: when the relationship between evaluations/, runs/results/, and benchmark_data.json is unclear
+  - target: patterns/judge-and-merge-scores.md
+    condition: when the derived record in question is a judge score rather than an extracted constraint
   - target: patterns/update-paper-results.md
     condition: once a derived score is verified and ready to cite in the manuscript
 grounds_to: []
@@ -21,7 +23,7 @@ last_updated: "2026-08-14"
 
 ## Context
 
-`evaluations/` holds derived annotation and scoring artifacts, kept strictly separate from the immutable generation evidence in `runs/results/` and the benchmark definition in `runs/benchmark_data.json`. The only records that exist today are `constraints.jsonl` (atomic constraints extracted from all 160 tasks) and `constraint_schema.json` (its taxonomy, extraction method, and validation status) — see `evaluations/README.md`. A judge harness, pairwise blind evaluation, and statistics/analysis layer are explicitly not yet built.
+`evaluations/` holds derived annotation and scoring artifacts, kept strictly separate from the immutable generation evidence in `runs/results/` and the benchmark definition in `runs/benchmark_data.json`. `constraints.jsonl` (atomic constraints extracted from all 160 tasks) and `constraint_schema.json` (its taxonomy, extraction method, and validation status) are complete — see `evaluations/README.md`. Judge scoring is partially run — see `patterns/judge-and-merge-scores.md` for the current split between `scores_auto.jsonl` (784 records scored ad hoc) and a manual-scoring tool for the remainder. There is no reusable persistence/validation module; a prior parallel attempt was removed as failed work. Pairwise blind evaluation and the statistics/analysis layer are not yet built.
 
 ## Steps
 
@@ -53,6 +55,6 @@ If a derived record looks wrong against the source task, re-read the task's `ful
 
 ## Update Scaffold
 
-- [ ] Update `.mex/ROUTER.md` "Current Project State" when the judge harness, pairwise evaluation, or stats layer moves from "not yet built" to real.
-- [ ] Update `.mex/context/evaluation.md` "Metrics and Results" once a scoring method is implemented and populates the `[TO BE DETERMINED]` fields there.
-- [ ] Update this pattern if a new derived-artifact type is added, or split it into its own file if the new type's workflow diverges significantly from constraint extraction.
+- [ ] Update `.mex/ROUTER.md` "Current Project State" when `evaluations/scores.jsonl` is created, or pairwise/stats work starts.
+- [ ] Update `.mex/context/evaluation.md` "Metrics and Results" once paired statistics are implemented over the merged scores.
+- [ ] Update this pattern if a new derived-artifact type is added beyond constraints and scores, or split it further if that type's workflow diverges significantly.

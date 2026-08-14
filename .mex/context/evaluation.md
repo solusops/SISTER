@@ -17,10 +17,14 @@ edges:
     condition: when implementing or reviewing evaluation code and result artifacts
   - target: patterns/run-evaluation.md
     condition: when executing an evaluation or reproducing a result
+  - target: patterns/derived-evaluation.md
+    condition: when adding or editing derived constraint/evaluation records under evaluations/
+  - target: patterns/judge-and-merge-scores.md
+    condition: when running judge scoring, resuming the persistence-layer implementation, or merging automated and manual score exports
   - target: patterns/update-paper-results.md
     condition: when transferring verified evaluation results into the paper
 grounds_to: []
-last_updated: "2026-08-10"
+last_updated: "2026-08-14"
 ---
 
 # Evaluation
@@ -62,10 +66,81 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   silently resume legacy files. Use `--resume` only when deliberately
   recovering a known interrupted run in the active results directory.
 
+## Judging
+
+- Rubric and blinding contract: `evaluations/judge_config.json`. Per-constraint
+  adherence is `a_ik ∈ {0, 0.5, 1}` (violated/absent, partial, clearly
+  satisfied) with a required reason string; the 5-dimension creative-quality
+  score (craft, structure_coherence, originality, genre_effectiveness,
+  characterization) is 1–5 with **no reason field** — only `characterization`
+  is nullable (paired with `characterization_na: true` when the task has no
+  character requirement). Judge input is blinded to `model_id`, `model_name`,
+  `condition`, `quant_file`, and seed — it sees only
+  `{record_id, story_id, full_instruction, constraints[], text}`. Never show
+  raw sharded turn text to a judge (automated or human) — only the aggregate
+  `full_instruction` plus each constraint's `introduced_at_shard` index; the
+  raw shard text would reveal the condition and break the blind.
+- Persistence/validation module: none currently. A prior parallel attempt
+  (`evaluations/run_judge_harness.py` + `test_run_judge_harness.py`) was
+  removed as failed work on 2026-08-14. If a future pass wants reusable
+  validation (exact constraint-ID coverage, valid score ranges, consistent
+  `characterization`/`characterization_na`, a stable evaluation ID, and
+  resumable append-only persistence), build it fresh — no existing code to
+  extend, and do not assume the filenames above mean anything if they
+  reappear.
+- What's actually been scored so far, and by what path: an ad hoc Claude Code
+  Workflow scored 784 of 1,874 eligible final records — mechanically
+  validated (0 errors: exact constraint coverage, valid ranges, consistent
+  characterization) — saved to `evaluations/scores_auto.jsonl`. No LLM-based
+  independent verify pass ever completed (0/240 verify-stage calls finished
+  across two attempts) — trust rests on the mechanical check alone, which
+  covers everything the verify agent would have. 46 final records
+  (>10,000 characters, mostly `qwen/qwen3.5-9b` sharded) were excluded from
+  automated judging before this pass and are in
+  `evaluations/excluded_for_manual_annotation.jsonl`. The remaining 1,093
+  unscored plus those 46 (1,139 total) are queued in a published manual
+  scoring tool — see `.mex/ROUTER.md` "Current Project State" for the
+  artifact URL and the merge-conflict caveat when combining exports from
+  multiple people.
+- Native Codex judging subsequently scored the 1,093 non-outlier records not
+  already represented in `scores_auto.jsonl`, in 137 fresh blinded
+  `gpt-5.6-terra` medium-reasoning batches. Inputs live in
+  `evaluations/native_judge_batches/`; one independent JSONL output per batch
+  lives in `evaluations/native_judge_scores/`. The outputs are candidates only:
+  completion was checked by batch/file and row count (137 files, 1,093 rows),
+  while structural validation and sampling are intentionally deferred. All 46
+  long outputs remain out of scope, including three that overlap the old
+  automatic-score file.
+- A separate 46-record long-output pass then used fresh one-record
+  `gpt-5.6-sol` high-reasoning workers. Its candidate scores are in
+  `evaluations/native_judge_long_scores/`; they are not yet canonical and
+  retain the same deferred structural-validation and sampling status.
+- Structural validation subsequently found 12 candidate-row defects: eight
+  Terra rows each omitted exactly the final supplied constraint, and four
+  early long-pass rows used an underspecified quality schema. These were
+  replaced through blind, one-record `gpt-5.6-sol` high-reasoning repair
+  batches in `evaluations/native_judge_repair_scores/`. The active score pool
+  now has 1,920 unique final-record scores with zero structural errors: 781
+  non-overlapping legacy rows (`scores_auto_nonoverlap.jsonl`), 1,085 retained
+  native rows, 42 retained long rows, and 12 repairs. The original 784-row
+  `scores_auto.jsonl` remains historical evidence; its three auto/long
+  overlaps are not active. Sampling and any canonical merge remain deferred.
+- Batch-level extraction quality is uneven: one extraction batch (covering
+  `romance_011`–`020` and `science_fiction_001`–`004`) had 5 distinct defects
+  caught only by human spot-check, not by mechanical validation — see
+  `evaluations/constraint_schema.json`'s `human_spot_check` field. Only
+  36/160 stories were human-checked; treat the rest as validated mechanically
+  only.
+
 ## Metrics and Results
 
-- Primary performance metric: [TO BE DETERMINED — populate after first implementation].
-- Supporting metrics and aggregation: [TO BE DETERMINED — populate after first implementation].
+- Primary performance metric: constraint adherence `I_i = mean(a_ik)` per
+  (story, model, condition), and the 5-dimension creative-quality score —
+  see the Judging section above. Not yet aggregated into paired statistics.
+- Supporting metrics and aggregation: [TO BE DETERMINED — paired deltas,
+  Wilcoxon signed-rank, Cohen's d_z, win/tie/loss rates, and the
+  instruction-loss vs. creative-degradation decomposition are designed but
+  not implemented; populate once `evaluations/scores.jsonl` is complete].
 - Result artifacts and storage location: the active flat root contains only
   the six completed current-model files, their independent combined dataset,
   and one index. The runner appends each raw generated
