@@ -10,6 +10,7 @@ build/
 *.brf
 *.bcf
 *.fls
+*.fdb_latexmk
 *.idx
 *.ilg
 *.ind

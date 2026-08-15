@@ -114,7 +114,7 @@ Write a comedy story about a kid who realizes mid-quiz that he studied for the w
 
 The released run index records the configuration history of each model, including changes made when a response reached the configured context limit. This appendix reports the recovery events that appear in that index. The released per-model result files contain 1{,}156 records each, and every released record has \texttt{finish\_reason=stop}.
 
-\paragraph{GPT-OSS 20B.} GPT-OSS~20B was run with temperature $0.8$ and seed $12345$. Its recorded configuration does not include a thinking-budget field.
+\paragraph{GPT-OSS 20B.} GPT-OSS~20B was run with temperature $0.8$ and seed $12345$.
 
 \paragraph{Granite 4 H Tiny.} Granite~4 H Tiny has one recorded context-length event. On item \texttt{fantasy/10}, in the Sharded condition at turn 6, the response ended with \texttt{finish\_reason=length}. The index records that five raw records from the affected trajectory were discarded and that generation was retried with seed $12346$, incremented from $12345$. The context window remained 16{,}384 tokens. The generation history records seed $12346$ from raw-record sequence 773 onward, and the completed released output contains only normal \texttt{stop} completions.
 

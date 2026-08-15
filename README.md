@@ -1,25 +1,28 @@
 # The Effects of Incremental Instruction Delivery on Language-Model Creative Writing
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21951541.svg)](https://doi.org/10.5281/zenodo.21951541)
+
 Does splitting a story's instructions across a conversation, instead of
 giving them all at once, change what a language model writes?
 
 ## Research question
 
-When a language model receives the same final story specification, does its
-output differ when the instructions are presented incrementally across a
-conversation rather than all at once in a single prompt?
+When a task specification is revealed incrementally across a conversation
+rather than given all at once in a single prompt, does a language model's
+creative writing output differ?
 
-The study compares two semantically matched conditions:
+The study compares two matched conditions:
 
 - **Full instruction:** the complete story specification is supplied before
   generation.
-- **Incremental instruction:** the same specification is revealed across
-  multiple conversational turns.
+- **Incremental instruction:** a matched multi-turn specification designed to
+  preserve task content while distributing it across five to nine conversational
+  turns.
 
-The analysis focuses on constraint retention, contradiction, coherence, and
-the natural integration of later instructions. Model family, parameter
-count, and quantization are recorded as inference configurations, not
-treated as causal variables.
+The analysis measures constraint adherence, craft, structure/coherence,
+originality, genre effectiveness, and characterization, alongside
+human--judge reliability. Model family, parameter count, and quantization
+are recorded as inference configurations, not treated as causal variables.
 
 ## Data
 
@@ -82,7 +85,7 @@ blinding contract, and judge instructions are in `evaluations/`:
 
 ## Evaluator and human validation
 
-Two independent pairwise evaluators — a standard preference judge
+Two pairwise evaluation protocols — a standard preference judge
 (`judge_comparisons`, run by `evaluations/human_validation/validate_pairwise_validation.mjs`)
 and an evidence-first evaluator that audits every constraint before
 choosing a preference (`judge_audit`, run by
@@ -93,21 +96,34 @@ check for position bias and evaluator-human agreement.
 
 ## Result analysis
 
-`analysis/analyze_human_model_agreement.py` computes exact/directional
-agreement and weighted Cohen's kappa between the human judgments and the
-model evaluator's primary-order judgments over the full 30-case sample.
-Paired statistical analysis over the judge scores (constraint-loss vs.
-creative-quality effects across conditions) is in progress; this section
-will be filled in further once that lands.
+`analysis/` contains the paired FULL--SHARDED analysis over 960 matched
+model--task pairs, story-clustered bootstrap confidence intervals,
+standardized effect calculations, equal-adherence analysis, model-wise
+effects, judge-source sensitivity analysis, and the scripts used to produce
+the paper's result figures and tables. `analysis/analyze_human_model_agreement.py`
+computes exact/directional agreement and weighted Cohen's kappa between the
+human judgments and the model evaluator's primary-order judgments over the
+full 30-case sample.
 
 ## Citation
 
 ```bibtex
-@misc{incremental_instruction_creative_writing_2026,
-  title  = {The Effects of Incremental Instruction Delivery on Language-Model Creative Writing},
-  author = {Anshuman Singh and Abrar Eyasir and Haseeb Yaqoob and John Manavalan},
-  year   = {2026},
-  note   = {Manuscript in preparation}
+@software{singh2026sister,
+  author    = {Anshuman Singh and Abrar Eyasir and Haseeb Yaqoob and John Manavalan},
+  title     = {SISTER: Code and Evaluation Pipeline for The Effects of Incremental Instruction Delivery on Language-Model Creative Writing},
+  year      = {2026},
+  version   = {v0.1.0},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.21951541},
+  url       = {https://doi.org/10.5281/zenodo.21951541}
+}
+
+@misc{singh2026incrementaldata,
+  author       = {Anshuman Singh and Abrar Eyasir and Haseeb Yaqoob and John Manavalan},
+  title        = {Incremental Instruction Creative Writing: Benchmark, Generations, and Evaluation Dataset},
+  year         = {2026},
+  howpublished = {Hugging Face Datasets},
+  url          = {https://huggingface.co/datasets/solusops/incremental-instruction-creative-writing}
 }
 ```
 
