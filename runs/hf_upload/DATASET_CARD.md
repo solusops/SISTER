@@ -25,8 +25,7 @@ judging: the 160-task benchmark, six baseline models' raw outputs on it
 (full-instruction vs. sharded/incremental delivery), pointwise judge scores,
 two independent pairwise evaluator-validation passes, and the human pairwise
 annotation sample used to validate them. See the paired GitHub repo
-(`incremental-instruction-creative-writing`) for the generation/judging code
-and the manuscript source.
+(`incremental-instruction-creative-writing`) for the generation/judging code.
 
 ## Configs
 
