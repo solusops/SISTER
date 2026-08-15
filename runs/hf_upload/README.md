@@ -29,3 +29,18 @@ points to. See `../BENCHMARK.md` and `../results/README.md` for more.
 
 - Benchmark: https://huggingface.co/datasets/SolusOps/sister-benchmark
 - Generations: https://huggingface.co/datasets/SolusOps/sister-benchmark-generations
+
+## New pushes: `push_dataset.py`
+
+The two scripts above still describe how those two repos were built, and
+they remain accurate (same 6 models, same 160 tasks) — they're kept, not
+re-run. But going forward, citing the *full study* (benchmark + generations
++ judging + human validation) uses one new consolidated repo built by
+`push_dataset.py` instead: six configs (`benchmark`, `generations`,
+`pointwise_scores`, `pairwise_validation`, `evidence_first_validation`,
+`human_eval`) in a single repo, named after the paper
+(`incremental-instruction-creative-writing`) rather than after `SISTER`
+(the program). See that script's docstring and
+`DATASET_CARD.md` for the full config/file layout. The old two repos stay
+published as legacy for existing citations; this one supersedes them for
+new ones.
