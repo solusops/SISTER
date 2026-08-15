@@ -1,0 +1,44 @@
+{
+  "human_cases_completed": 11,
+  "human_case_ids": [
+    "case-01",
+    "case-02",
+    "case-03",
+    "case-04",
+    "case-05",
+    "case-06",
+    "case-07",
+    "case-08",
+    "case-09",
+    "case-10",
+    "case-11"
+  ],
+  "ordinal_encoding": {
+    "A clearly better": -2,
+    "A slightly better": -1,
+    "Tie": 0,
+    "B slightly better": 1,
+    "B clearly better": 2
+  },
+  "weighting": "quadratic ordinal weights: 1 - ((i - j) / 4)^2 on the ordered five-level scale",
+  "constraint_following": {
+    "n": 11,
+    "exact_five_level_agreement": 0.36363636363636365,
+    "directional_agreement": 0.5454545454545454,
+    "weighted_cohens_kappa_quadratic": 0.4210526315789472,
+    "collapsed_cohens_kappa": 0.12698412698412687,
+    "mean_absolute_disagreement": 1.1818181818181819,
+    "severe_disagreement_rate": 0.18181818181818182,
+    "severe_disagreement_cases": 2
+  },
+  "creative_writing_quality": {
+    "n": 11,
+    "exact_five_level_agreement": 0.5454545454545454,
+    "directional_agreement": 0.5454545454545454,
+    "weighted_cohens_kappa_quadratic": 0.4798598949211913,
+    "collapsed_cohens_kappa": 0.21428571428571422,
+    "mean_absolute_disagreement": 1,
+    "severe_disagreement_rate": 0.2727272727272727,
+    "severe_disagreement_cases": 3
+  }
+}

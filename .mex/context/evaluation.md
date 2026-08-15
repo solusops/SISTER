@@ -134,10 +134,13 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   receipts. Translating reversed labels back to primary orientation yielded
   directional consistency of 76.7% for constraint following and 83.3% for
   creative quality, with exact five-level consistency of 50.0% and 53.3%.
-  No human annotation export is in the repository, so no human-model estimate
-  is reported; the CLI will read such an export only after both freezes exist.
-  The manifest does not recover a confident development/pilot versus held-out
-  boundary, so do not retrospectively call the sample untouched validation.
+  The raw human export is external to the repository and contains 11 completed
+  cases (case-01 through case-11). Primary-order human-model results use only
+  those cases: exact/directional agreement is 36.4%/54.5% for constraints and
+  54.5%/54.5% for creative quality; quadratic weighted kappa is 0.421 and
+  0.480, respectively. The remaining 19 cases are not imputed. The manifest
+  does not recover a confident development/pilot versus held-out boundary, so
+  do not retrospectively call the sample untouched validation.
 - Batch-level extraction quality is uneven: one extraction batch (covering
   `romance_011`–`020` and `science_fiction_001`–`004`) had 5 distinct defects
   caught only by human spot-check, not by mechanical validation — see

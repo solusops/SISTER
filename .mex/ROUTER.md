@@ -132,9 +132,15 @@ Then read this file fully before doing anything else in this session.
   methodology/results report. After translating the reversed labels back to
   primary A/B orientation, directional consistency is 76.7% for constraint
   following and 83.3% for creative quality (80.0% across 60 decisions), with
-  12 directional changes listed in the artifact. No human annotation export
-  exists in this repository, so human-model agreement, kappa, a disagreement
-  table, and any claim of held-out validation are deliberately absent.
+  12 directional changes listed in the artifact. A supplied external human
+  export contains 11 completed cases (case-01 through case-11), and its raw
+  JSONL is not committed. Primary-order human-model comparison over N=11 is
+  now recorded in `human_model_agreement_summary.json` and
+  `human_model_disagreements.md`: exact/directional agreement is 36.4%/54.5%
+  for constraints and 54.5%/54.5% for creative quality; quadratic weighted
+  kappa is 0.421 and 0.480, respectively. The remaining 19 cases are not
+  imputed, and the unknown development/pilot versus held-out boundary remains
+  an explicit limitation.
 - The dataset is also published independently on Hugging Face:
   `runs/BENCHMARK.md` and `runs/results/README.md` document the two
   artifacts (`benchmark_data.json`, `results/`), and `runs/hf_upload/`
@@ -148,10 +154,10 @@ Then read this file fully before doing anything else in this session.
 - Qualitative sampling of the structurally valid active score pool, followed
   by an explicit decision on the canonical merge composition (including the
   46 long outputs); no `evaluations/scores.jsonl` exists yet.
-- Human-model agreement statistics and disagreement analysis for the pairwise
-  sample, pending a human annotation export; pointwise-score statistics over
-  merged scores (paired deltas, Wilcoxon, Cohen's d_z, the instruction-loss
-  vs. creative-degradation decomposition).
+- Completion of the remaining 19 human pairwise cases before any 30-case
+  human-model estimate; pointwise-score statistics over merged scores (paired
+  deltas, Wilcoxon, Cohen's d_z, the instruction-loss vs.
+  creative-degradation decomposition).
 - The transfer of verified results into manuscript text, figures, or tables.
 
 **Known issues:**

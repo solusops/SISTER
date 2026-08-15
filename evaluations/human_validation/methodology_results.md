@@ -18,7 +18,10 @@
 
 ### Human–model agreement
 
-No human annotation export is present in this repository, so exact agreement, directional agreement, weighted Cohen's kappa, collapsed Cohen's kappa, mean absolute disagreement, severe-disagreement rate, and the per-case disagreement table have not been computed. This is a data-availability limitation, not an exclusion of cases.
+Completed human cases: 11. Primary-order model judgments are compared with the same A/B assignment.
+- Constraint following: exact 36.4%; directional 54.5%; quadratic weighted kappa 0.421; collapsed kappa 0.127; mean absolute disagreement 1.182; severe disagreement 18.2%.
+- Creative-writing quality: exact 54.5%; directional 54.5%; quadratic weighted kappa 0.480; collapsed kappa 0.214; mean absolute disagreement 1.000; severe disagreement 27.3%.
+See `human_model_agreement_summary.json` and `human_model_disagreements.md` for the completed-case data and diagnostic table.
 
 ## Interpretation
 
@@ -27,7 +30,7 @@ Position consistency describes whether the model's comparative direction is stab
 ## Limitations
 
 - The sample is N=30 and is a matched evaluator-validation study, not a rerun of the 1,920-output pointwise evaluation.
-- The repository does not contain the human export, so no human–model estimate can yet be reported.
+- The supplied human export contains 11 completed cases; all human-model statistics are based on N=11, not the full 30-case sample.
 - The repository's hidden manifest records selection strata, but it does not identify a recoverable development/pilot versus held-out boundary. This report therefore does not claim that all 30 cases were untouched held-out validation data.
 - Categorical labels remain authoritative; the -2 to +2 representation in `ordinal_model_judgments.jsonl` is for analysis only.
 

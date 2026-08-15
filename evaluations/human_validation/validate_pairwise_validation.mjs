@@ -18,6 +18,13 @@ const PASSES = new Set(["primary", "reversed"]);
 const SCALE = ["A clearly better", "A slightly better", "Tie", "B slightly better", "B clearly better"];
 const SCALE_SET = new Set(SCALE);
 const ORDINAL = new Map(SCALE.map((label, index) => [label, index - 2]));
+const HUMAN_EXPORT_LABELS = new Map([
+  ["a_clear", "A clearly better"],
+  ["a_slight", "A slightly better"],
+  ["tie", "Tie"],
+  ["b_slight", "B slightly better"],
+  ["b_clear", "B clearly better"],
+]);
 const CASE_FIELDS = new Set(["case_id", "instruction", "constraints", "response_A", "response_B"]);
 const CONSTRAINT_FIELDS = new Set(["constraint_id", "requirement"]);
 const JUDGMENT_FIELDS = new Set([
@@ -263,6 +270,19 @@ function ordinalRows() {
 function report() {
   const position = positionConsistency();
   ordinalRows();
+  const humanSummaryPath = path.join(OUTPUT_DIR, "human_model_agreement_summary.json");
+  const humanSummary = fs.existsSync(humanSummaryPath)
+    ? JSON.parse(fs.readFileSync(humanSummaryPath, "utf8"))
+    : null;
+  const percentage = (value) => `${(value * 100).toFixed(1)}%`;
+  const humanLines = humanSummary ? [
+    `Completed human cases: ${humanSummary.human_cases_completed}. Primary-order model judgments are compared with the same A/B assignment.`,
+    `- Constraint following: exact ${percentage(humanSummary.constraint_following.exact_five_level_agreement)}; directional ${percentage(humanSummary.constraint_following.directional_agreement)}; quadratic weighted kappa ${humanSummary.constraint_following.weighted_cohens_kappa_quadratic?.toFixed(3) ?? "undefined"}; collapsed kappa ${humanSummary.constraint_following.collapsed_cohens_kappa?.toFixed(3) ?? "undefined"}; mean absolute disagreement ${humanSummary.constraint_following.mean_absolute_disagreement.toFixed(3)}; severe disagreement ${percentage(humanSummary.constraint_following.severe_disagreement_rate)}.`,
+    `- Creative-writing quality: exact ${percentage(humanSummary.creative_writing_quality.exact_five_level_agreement)}; directional ${percentage(humanSummary.creative_writing_quality.directional_agreement)}; quadratic weighted kappa ${humanSummary.creative_writing_quality.weighted_cohens_kappa_quadratic?.toFixed(3) ?? "undefined"}; collapsed kappa ${humanSummary.creative_writing_quality.collapsed_cohens_kappa?.toFixed(3) ?? "undefined"}; mean absolute disagreement ${humanSummary.creative_writing_quality.mean_absolute_disagreement.toFixed(3)}; severe disagreement ${percentage(humanSummary.creative_writing_quality.severe_disagreement_rate)}.`,
+    "See `human_model_agreement_summary.json` and `human_model_disagreements.md` for the completed-case data and diagnostic table.",
+  ] : [
+    "No human annotation export is present in this repository, so exact agreement, directional agreement, weighted Cohen's kappa, collapsed Cohen's kappa, mean absolute disagreement, severe-disagreement rate, and the per-case disagreement table have not been computed. This is a data-availability limitation, not an exclusion of cases.",
+  ];
   const lines = [
     "# Matched Human–Model Pairwise Validation",
     "",
@@ -284,7 +304,7 @@ function report() {
     "",
     "### Human–model agreement",
     "",
-    "No human annotation export is present in this repository, so exact agreement, directional agreement, weighted Cohen's kappa, collapsed Cohen's kappa, mean absolute disagreement, severe-disagreement rate, and the per-case disagreement table have not been computed. This is a data-availability limitation, not an exclusion of cases.",
+    ...humanLines,
     "",
     "## Interpretation",
     "",
@@ -293,7 +313,9 @@ function report() {
     "## Limitations",
     "",
     "- The sample is N=30 and is a matched evaluator-validation study, not a rerun of the 1,920-output pointwise evaluation.",
-    "- The repository does not contain the human export, so no human–model estimate can yet be reported.",
+    humanSummary
+      ? `- The supplied human export contains ${humanSummary.human_cases_completed} completed cases; all human-model statistics are based on N=${humanSummary.human_cases_completed}, not the full 30-case sample.`
+      : "- The repository does not contain the human export, so no human-model estimate can yet be reported.",
     "- The repository's hidden manifest records selection strata, but it does not identify a recoverable development/pilot versus held-out boundary. This report therefore does not claim that all 30 cases were untouched held-out validation data.",
     "- Categorical labels remain authoritative; the -2 to +2 representation in `ordinal_model_judgments.jsonl` is for analysis only.",
     "",
@@ -305,6 +327,13 @@ function directionLabel(label) {
   const value = ORDINAL.get(label);
   if (value === undefined) throw new Error(`unknown ordinal label: ${label}`);
   return value < 0 ? "A" : value > 0 ? "B" : "Tie";
+}
+
+function normalizeHumanLabel(label, caseId, field) {
+  if (SCALE_SET.has(label)) return label;
+  const normalized = HUMAN_EXPORT_LABELS.get(label);
+  if (!normalized) throw new Error(`human export has invalid ${field} label for ${caseId}`);
+  return normalized;
 }
 
 function kappa(observedPairs, categories, weight) {
@@ -366,13 +395,10 @@ function analyzeHuman(humanPath) {
     if (!modelByCase.has(row.case_id)) throw new Error(`human export contains an out-of-sample case: ${row.case_id}`);
     if (seen.has(row.case_id)) throw new Error(`human export contains duplicate case: ${row.case_id}`);
     seen.add(row.case_id);
-    if (!SCALE_SET.has(row.constraint_following) || !SCALE_SET.has(row.creative_quality)) {
-      throw new Error(`human export has invalid scale label for ${row.case_id}`);
-    }
     completed.push({
       case_id: row.case_id,
-      constraint_following: row.constraint_following,
-      creative_quality: row.creative_quality,
+      constraint_following: normalizeHumanLabel(row.constraint_following, row.case_id, "constraint_following"),
+      creative_quality: normalizeHumanLabel(row.creative_quality, row.case_id, "creative_quality"),
       notes: typeof row.notes === "string" ? row.notes : "",
     });
   }
