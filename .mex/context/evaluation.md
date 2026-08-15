@@ -124,7 +124,13 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   non-overlapping legacy rows (`scores_auto_nonoverlap.jsonl`), 1,085 retained
   native rows, 42 retained long rows, and 12 repairs. The original 784-row
   `scores_auto.jsonl` remains historical evidence; its three auto/long
-  overlaps are not active. Sampling and any canonical merge remain deferred.
+  overlaps are not active. The canonical merge now exists:
+  `evaluations/merge_scores.py` (+ `test_merge_scores.py`) combines and
+  validates all four sources into `evaluations/scores.jsonl` (1,920 rows,
+  each keeping its original `source` tag — `auto_judge_sonnet_medium_effort`,
+  `codex_native_terra_medium`, `codex_native_sol_high_long_output`,
+  `codex_native_sol_high_repair`). Qualitative sampling of this pool is
+  still deferred.
 - Matched pairwise evaluator validation uses only the fixed blind 30-pair
   sample. `evaluations/human_validation/` contains a sanitized primary-order
   case JSONL and an exact A/B-swapped JSONL, each with 30 cases and 60
@@ -134,8 +140,11 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   receipts. Translating reversed labels back to primary orientation yielded
   directional consistency of 76.7% for constraint following and 83.3% for
   creative quality, with exact five-level consistency of 50.0% and 53.3%.
-  The raw human export is external to the repository and contains 11 completed
-  cases (case-01 through case-11). Primary-order human-model results use only
+  The raw human export is now committed as
+  `evaluations/human_validation/annotations.jsonl` (11 completed cases,
+  case-01 through case-11 — confirmed by row count, not just file size, since
+  the source file lacked a trailing newline); `sample_30.jsonl` is the same
+  30-case blind sample under an explicit name. Primary-order human-model results use only
   those cases: exact/directional agreement is 36.4%/54.5% for constraints and
   54.5%/54.5% for creative quality; quadratic weighted kappa is 0.421 and
   0.480, respectively. The remaining 19 cases are not imputed. The manifest

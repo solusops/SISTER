@@ -160,13 +160,33 @@ Then read this file fully before doing anything else in this session.
   (`push_benchmark.py`, `push_generations.py`) pushes them to the separate
   `sister-benchmark` and `sister-benchmark-generations` Hub repos.
 
+- The canonical score merge now exists: `evaluations/merge_scores.py` (+
+  `test_merge_scores.py`) combines `scores_auto_nonoverlap.jsonl`, retained
+  native/long rows, and repairs into `evaluations/scores.jsonl` (1,920 rows,
+  each keeping its original `source` tag), with structural validation
+  (record_id uniqueness, exact constraint-ID coverage, canonical quality-key
+  set, adherence scale, `characterization`/`characterization_na`
+  consistency) enforced before writing. The raw 11-case human pairwise
+  export is now committed as
+  `evaluations/human_validation/annotations.jsonl`, and the 30-case blind
+  sample is also available under the explicit name
+  `evaluations/human_validation/sample_30.jsonl`.
+- A citation-facing snapshot is being cut in parallel: a new sibling repo
+  `incremental-instruction-creative-writing` (clean scripts/configs/final
+  outputs only, no dev scaffolding or diagnostic runs) and one consolidated
+  Hugging Face dataset repo of the same name (six configs: `benchmark`,
+  `generations`, `pointwise_scores`, `pairwise_validation`,
+  `evidence_first_validation`, `human_eval`), alongside the existing
+  `sister-benchmark` / `sister-benchmark-generations` repos which remain
+  published as legacy. Not tagged/released yet — pending manuscript results
+  sync.
+
 **Not yet built:**
 - A judging persistence/validation module (a prior parallel attempt was
   removed as failed work — see above). Needed before running further
   automated judging in a repeatable way.
-- Qualitative sampling of the structurally valid active score pool, followed
-  by an explicit decision on the canonical merge composition (including the
-  46 long outputs); no `evaluations/scores.jsonl` exists yet.
+- Qualitative sampling of the structurally valid active score pool
+  (`evaluations/scores.jsonl`), including the 46 long outputs.
 - Completion of the remaining 19 human pairwise cases before any 30-case
   human-model estimate; pointwise-score statistics over merged scores (paired
   deltas, Wilcoxon, Cohen's d_z, the instruction-loss vs.
