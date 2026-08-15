@@ -1,6 +1,7 @@
 # The Effects of Incremental Instruction Delivery on Language-Model Creative Writing
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21951541.svg)](https://doi.org/10.5281/zenodo.21951541)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21951541.svg)](https://doi.org/10.5281/zenodo.21951541)
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21954790.svg)](https://doi.org/10.5281/zenodo.21954790)
 
 Does splitting a story's instructions across a conversation, instead of
 giving them all at once, change what a language model writes?
@@ -26,8 +27,7 @@ are recorded as inference configurations, not treated as causal variables.
 
 ## Data
 
-The benchmark, generations, and every evaluation artifact are published on
-Hugging Face as one dataset repo:
+The benchmark, generations, and evaluation artifacts are archived on Zenodo under **[DOI 10.5281/zenodo.21954790](https://doi.org/10.5281/zenodo.21954790)** and published interactively on Hugging Face:
 
 **[`incremental-instruction-creative-writing`](https://huggingface.co/datasets/solusops/incremental-instruction-creative-writing)**
 
@@ -119,11 +119,13 @@ full 30-case sample.
 }
 
 @misc{singh2026incrementaldata,
-  author       = {Anshuman Singh and Abrar Eyasir and Haseeb Yaqoob and John Manavalan},
+  author       = {Anshuman Singh},
   title        = {Incremental Instruction Creative Writing: Benchmark, Generations, and Evaluation Dataset},
   year         = {2026},
-  howpublished = {Hugging Face Datasets},
-  url          = {https://huggingface.co/datasets/solusops/incremental-instruction-creative-writing}
+  version      = {v0.1.0},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.21954790},
+  url          = {https://doi.org/10.5281/zenodo.21954790}
 }
 ```
 

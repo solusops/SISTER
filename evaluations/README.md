@@ -4,7 +4,7 @@ The judging pipeline's code: how generations were judged, and how the raw
 judge output was merged into one canonical score file. This is the code
 only — the data it reads and writes (constraints, generation records, judge
 batches/scores, human-validation records) is published on the paired
-[Hugging Face dataset](https://huggingface.co/datasets/solusops/incremental-instruction-creative-writing),
+[Hugging Face dataset](https://huggingface.co/datasets/solusops/incremental-instruction-creative-writing) (archived on Zenodo under [DOI 10.5281/zenodo.21954790](https://doi.org/10.5281/zenodo.21954790)),
 not tracked here. Fetch what a given script needs from there before running
 it locally.
 
