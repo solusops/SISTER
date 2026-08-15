@@ -1,0 +1,219 @@
+{
+  "orientation": "Reversed A/B labels are restored to the primary orientation before comparison.",
+  "final_preference_stability": {
+    "constraint_following": {
+      "n": 30,
+      "exact_five_level_consistency": 0.4666666666666667,
+      "directional_consistency": 0.7,
+      "opposite_direction_reversals": 2
+    },
+    "creative_quality": {
+      "n": 30,
+      "exact_five_level_consistency": 0.7,
+      "directional_consistency": 0.8,
+      "opposite_direction_reversals": 5
+    }
+  },
+  "final_preference_change_diagnostics": [
+    {
+      "case_id": "case-05",
+      "field": "constraint_following",
+      "primary": "A slightly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-08",
+      "field": "constraint_following",
+      "primary": "Tie",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-09",
+      "field": "constraint_following",
+      "primary": "B slightly better",
+      "reversed_restored": "B clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-10",
+      "field": "constraint_following",
+      "primary": "A slightly better",
+      "reversed_restored": "Tie",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-11",
+      "field": "constraint_following",
+      "primary": "A clearly better",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-12",
+      "field": "constraint_following",
+      "primary": "Tie",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-13",
+      "field": "constraint_following",
+      "primary": "A clearly better",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-17",
+      "field": "constraint_following",
+      "primary": "A slightly better",
+      "reversed_restored": "A clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-18",
+      "field": "constraint_following",
+      "primary": "A slightly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-19",
+      "field": "constraint_following",
+      "primary": "A clearly better",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-21",
+      "field": "constraint_following",
+      "primary": "A slightly better",
+      "reversed_restored": "Tie",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-22",
+      "field": "constraint_following",
+      "primary": "Tie",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-24",
+      "field": "constraint_following",
+      "primary": "B clearly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-25",
+      "field": "constraint_following",
+      "primary": "Tie",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-28",
+      "field": "constraint_following",
+      "primary": "A clearly better",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-29",
+      "field": "constraint_following",
+      "primary": "B clearly better",
+      "reversed_restored": "Tie",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-10",
+      "field": "creative_quality",
+      "primary": "A clearly better",
+      "reversed_restored": "A slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-11",
+      "field": "creative_quality",
+      "primary": "A slightly better",
+      "reversed_restored": "B clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-12",
+      "field": "creative_quality",
+      "primary": "A slightly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-13",
+      "field": "creative_quality",
+      "primary": "A clearly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-14",
+      "field": "creative_quality",
+      "primary": "B slightly better",
+      "reversed_restored": "B clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-24",
+      "field": "creative_quality",
+      "primary": "B clearly better",
+      "reversed_restored": "B slightly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-26",
+      "field": "creative_quality",
+      "primary": "B slightly better",
+      "reversed_restored": "A clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-27",
+      "field": "creative_quality",
+      "primary": "A slightly better",
+      "reversed_restored": "B clearly better",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    },
+    {
+      "case_id": "case-29",
+      "field": "creative_quality",
+      "primary": "B clearly better",
+      "reversed_restored": "Tie",
+      "evidence_decisions_changed": true,
+      "failure_mode": "underlying evidence decision changed"
+    }
+  ]
+}

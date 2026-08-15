@@ -141,6 +141,20 @@ Measure whether LLM performance degrades in multi-turn conversations for the res
   0.480, respectively. The remaining 19 cases are not imputed. The manifest
   does not recover a confident development/pilot versus held-out boundary, so
   do not retrospectively call the sample untouched validation.
+- A separate evidence-first evaluator completed two fresh 30-case passes from
+  the same sanitized inputs. It records constraint-specific
+  satisfied/partial/violated evidence for both responses and eight grounded
+  creative dimensions before its independent final preference; neither pass
+  received human data or simple-pairwise results. Its frozen artifacts are
+  `evidence_first_primary.jsonl` and `evidence_first_reversed.jsonl` under
+  `evaluations/human_validation/`. Restored-order final directional stability
+  is 70.0% for constraints and 80.0% for creative quality (exact 46.7% and
+  70.0%); there are 2 and 5 opposite-direction reversals. Constraint-status
+  stability is 430/496 (86.7%). Every changed final preference has at least
+  one changed constraint status or creative dimension winner; none are pure
+  final-aggregation changes with stable intermediate decisions. Do not compare
+  this evaluator to human judgments until an explicitly separate post-freeze
+  analysis is requested.
 - Batch-level extraction quality is uneven: one extraction batch (covering
   `romance_011`–`020` and `science_fiction_001`–`004`) had 5 distinct defects
   caught only by human spot-check, not by mechanical validation — see

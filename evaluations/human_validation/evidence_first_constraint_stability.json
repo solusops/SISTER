@@ -1,0 +1,3975 @@
+{
+  "audited_response_constraint_decisions": 496,
+  "stable_decisions": 430,
+  "constraint_status_consistency": 0.8669354838709677,
+  "entries": [
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-01",
+      "constraint_id": "comedy_049_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-02",
+      "constraint_id": "comedy_018_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-03",
+      "constraint_id": "romance_019_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c10",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c10",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c11",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-04",
+      "constraint_id": "romance_008_c11",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-05",
+      "constraint_id": "comedy_054_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-06",
+      "constraint_id": "historical_fiction_009_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-07",
+      "constraint_id": "mystery_014_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-08",
+      "constraint_id": "fantasy_008_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-09",
+      "constraint_id": "fantasy_010_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-10",
+      "constraint_id": "fantasy_013_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-11",
+      "constraint_id": "historical_fiction_002_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-12",
+      "constraint_id": "historical_fiction_012_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-13",
+      "constraint_id": "comedy_044_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-14",
+      "constraint_id": "science_fiction_017_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-15",
+      "constraint_id": "fantasy_001_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-16",
+      "constraint_id": "science_fiction_014_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-17",
+      "constraint_id": "science_fiction_007_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c10",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c10",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c11",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-18",
+      "constraint_id": "romance_003_c11",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-19",
+      "constraint_id": "mystery_004_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-20",
+      "constraint_id": "mystery_014_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-21",
+      "constraint_id": "science_fiction_012_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-22",
+      "constraint_id": "fantasy_015_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-23",
+      "constraint_id": "mystery_019_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c10",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c10",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c11",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-24",
+      "constraint_id": "romance_004_c11",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-25",
+      "constraint_id": "mystery_001_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-26",
+      "constraint_id": "comedy_045_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "violated",
+      "stable": false
+    },
+    {
+      "case_id": "case-27",
+      "constraint_id": "science_fiction_009_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-28",
+      "constraint_id": "historical_fiction_020_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c10",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-29",
+      "constraint_id": "romance_011_c10",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c1",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c1",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c2",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c2",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c3",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c3",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c4",
+      "response_in_primary_orientation": "A",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c4",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "partial",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c5",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c5",
+      "response_in_primary_orientation": "B",
+      "primary_status": "partial",
+      "reversed_restored_status": "satisfied",
+      "stable": false
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c6",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c6",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "partial",
+      "stable": false
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c7",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c7",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c8",
+      "response_in_primary_orientation": "A",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c8",
+      "response_in_primary_orientation": "B",
+      "primary_status": "satisfied",
+      "reversed_restored_status": "satisfied",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c9",
+      "response_in_primary_orientation": "A",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    },
+    {
+      "case_id": "case-30",
+      "constraint_id": "historical_fiction_009_c9",
+      "response_in_primary_orientation": "B",
+      "primary_status": "violated",
+      "reversed_restored_status": "violated",
+      "stable": true
+    }
+  ]
+}

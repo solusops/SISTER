@@ -32,6 +32,14 @@ evaluation. Its only source sample is the ignored local blind-review app:
    and directional agreement, quadratic weighted kappa, collapsed kappa, mean
    absolute ordinal disagreement, severe opposite-direction rate, and a
    per-case diagnostic table. It never tunes the judge against human labels.
+5. For the evidence-first variant, use
+   `evaluations/human_validation/evaluate_evidence_first.mjs`. A fresh judge
+   must receive only one sanitized pass and return a complete constraint audit
+   plus all eight creative dimensions before final preferences. Assemble and
+   freeze both passes, then run `analyze`; it reports restored-orientation
+   final consistency, constraint-status stability, dimension-winner stability,
+   and whether each changed final preference has changed intermediate evidence
+   decisions. Do not read or compare human annotations in this workflow.
 
 ## Verify
 
@@ -42,3 +50,6 @@ evaluation. Its only source sample is the ignored local blind-review app:
   only the two response fields.
 - No human export is read before both freezes. If it is unavailable, report
   that limitation and do not claim human-model agreement or held-out status.
+- Evidence-first final preferences have a complete per-constraint audit and
+  eight creative dimensions; every status, winner, and final label validates
+  against the allowed schema before it enters a frozen file.

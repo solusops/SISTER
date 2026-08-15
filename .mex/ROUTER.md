@@ -141,6 +141,19 @@ Then read this file fully before doing anything else in this session.
   kappa is 0.421 and 0.480, respectively. The remaining 19 cases are not
   imputed, and the unknown development/pilot versus held-out boundary remains
   an explicit limitation.
+- A second evidence-first pairwise evaluator has now completed independent
+  primary and reversed passes over the same 30 cases. Its judge contexts saw
+  only sanitized instruction, constraints, and A/B response text; they did
+  not see human data, simple-pairwise outputs, scores, or provenance. Each
+  record audits every constraint as satisfied/partial/violated with concise
+  evidence and completes eight creative comparison dimensions before a final
+  preference. After restoring reversed orientation, final directional
+  consistency is 70.0% for constraints and 80.0% for creative quality; exact
+  five-level consistency is 46.7% and 70.0%; opposite-direction reversals are
+  2 and 5. Constraint-status stability is 430/496 (86.7%); all changed final
+  preferences also have changed intermediate evidence decisions, rather than
+  a stable-evidence aggregation change. See `evaluations/human_validation/`
+  `evidence_first_*`; no human comparison has been run for this evaluator.
 - The dataset is also published independently on Hugging Face:
   `runs/BENCHMARK.md` and `runs/results/README.md` document the two
   artifacts (`benchmark_data.json`, `results/`), and `runs/hf_upload/`
