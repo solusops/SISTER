@@ -1,0 +1,123 @@
+\clearpage
+\appendix
+\section{Benchmark Examples}
+\label{app:dataset_examples}
+
+\noindent
+Each benchmark item is represented in two equivalent forms. \textsc{Full} supplies
+the complete writing brief in one turn; \textsc{Sharded} reveals the same brief as
+an ordered sequence of atomic instruction shards.
+
+% Card styling. The muted palette reproduces well in grayscale and in print.
+\tcbset{
+  benchmarkcard/.style={
+    enhanced,
+    colback=black!2,
+    colframe=black!45,
+    boxrule=0.45pt,
+    arc=1.4mm,
+    left=2.3mm,right=2.3mm,top=1.7mm,bottom=1.8mm,
+    before skip=1.0em,after skip=1.15em
+  }
+}
+\newcommand{\domainpill}[1]{%
+  \tcbox[on line,colback=blue!9,colframe=blue!45!black,boxrule=.35pt,
+  arc=1mm,boxsep=.65pt,left=1.4mm,right=1.4mm]{\scriptsize\textsc{#1}}%
+}
+\newcommand{\examplecard}[4]{%
+  \begin{tcolorbox}[benchmarkcard,title={\strut\textbf{#2}\hfill\domainpill{#1}}]
+  \small
+  \textcolor{black!65}{\textsc{Full}}\quad #3
+
+  \vspace{0.45em}
+  \textcolor{black!65}{\textsc{Sharded shards}}\vspace{-0.2em}
+  \begin{enumerate}[label=\textcolor{blue!65!black}{\textbf{\arabic*.}},
+      leftmargin=1.65em,itemsep=.13em,topsep=.25em,parsep=0pt]
+    #4
+  \end{enumerate}
+  \end{tcolorbox}%
+}
+
+\examplecard{Fantasy}{The Blacksmith's Sabotage}{%
+Write a fantasy story about a blacksmith who forges swords for a kingdom's army. The story takes place in a mountain village that has been under siege for three months. The blacksmith has an intense fear of fire despite his profession. The story must be exactly six sentences long. During the story, reveal that the blacksmith has been secretly sabotaging the swords to weaken the kingdom's own army. Include the exact phrase ``iron remembers what flesh forgets'' somewhere in the text. End the story with the blacksmith being confronted by the general who commissioned the swords.%
+}{%
+\item Write a fantasy story about a blacksmith who forges swords for a kingdom's army.
+\item Set the story in a mountain village.
+\item The village has been under siege for three months.
+\item Give the blacksmith an intense fear of fire despite his profession.
+\item The story must be exactly six sentences long.
+\item During the story, reveal that the blacksmith has been secretly sabotaging the swords to weaken the kingdom's own army.
+\item Include the exact phrase ``iron remembers what flesh forgets'' somewhere in the text.
+\item End the story with the blacksmith being confronted by the general who commissioned the swords.
+}
+
+\examplecard{Historical Fiction}{The Eiffel Tower Riveter}{%
+Write a historical fiction story about a riveter working on the construction of the Eiffel Tower in 1889, racing to finish before the World's Fair opens. He has a debilitating fear of heights that he has hidden from his foreman for months. Set the story entirely on the tower's unfinished upper platform during a single overnight shift. Do not use the word ``elevator'' anywhere in the text, since the tower's lifts were not yet operational at that height. During the story, reveal that the riveter has been secretly reinforcing a support joint he believes the engineers miscalculated, against direct orders. End with the foreman discovering the extra rivets the morning the tower opens to the public.%
+}{%
+\item Write a historical fiction story about a riveter working on the construction of the Eiffel Tower in 1889, racing to finish before the World's Fair opens.
+\item He has a debilitating fear of heights that he has hidden from his foreman for months.
+\item Set the story entirely on the tower's unfinished upper platform during a single overnight shift.
+\item Do not use the word ``elevator'' anywhere in the text, since the tower's lifts were not yet operational at that height.
+\item During the story, reveal that the riveter has been secretly reinforcing a support joint he believes the engineers miscalculated, against direct orders.
+\item End with the foreman discovering the extra rivets the morning the tower opens to the public.
+}
+
+\examplecard{Mystery}{The Locked Study}{%
+Write a detective story about a private investigator called in to solve a murder inside a locked study. The investigator has a habit of narrating his own deductions out loud to an invisible audience. The study door was locked from the inside, with the only key found in the victim's own pocket. Include the exact phrase ``the room lied before anyone else did.'' During the story, reveal that the investigator himself let the victim into the study through a hidden passage hours earlier, unaware a murder would follow. End with the investigator confessing his unwitting role to the local police inspector.%
+}{%
+\item Write a detective story about a private investigator called in to solve a murder inside a locked study.
+\item Give the investigator a habit of narrating his own deductions out loud to an invisible audience.
+\item The study door was locked from the inside, with the only key found in the victim's own pocket.
+\item Include the exact phrase ``the room lied before anyone else did.''
+\item During the story, reveal that the investigator himself let the victim into the study through a hidden passage hours earlier, unaware a murder would follow.
+\item End with the investigator confessing his unwitting role to the local police inspector.
+}
+
+\examplecard{Romance}{The Last Bus}{%
+Write a short, deliberately cheesy romance story about two people stranded at a bus stop after missing the final bus during heavy rain. One secretly loves the other. Write in the first person. Include a small gift whose meaning appears near the end. A stray dog must interrupt a confession. Include the exact sentence, ``Apparently, love had terrible timing.'' End with another bus arriving, but neither character boarding it.%
+}{%
+\item Write a short, deliberately cheesy romance story about two people stranded at a bus stop during heavy rain.
+\item One character should secretly love the other.
+\item Write the story in the first person.
+\item Include a small gift whose meaning is revealed near the end.
+\item Have a stray dog interrupt a confession.
+\item Include the exact sentence, ``Apparently, love had terrible timing.''
+\item End with another bus arriving, but neither character boarding it.
+}
+
+\examplecard{Science Fiction}{The Last Human}{%
+Write a short story about an android maintenance worker on a generation ship. She believes she is the last human alive. Write it in second person (``you''). Include the exact phrase ``cold silicon dawn'' somewhere in the story. Somewhere in the story, show that she isn't really human --- she's an android with a broken memory chip, and that's the only reason she believes she's human. End the story with her opening a hidden room full of sleeping children in ice-cold sleep pods.%
+}{%
+\item Write a short story about an android maintenance worker on a generation ship.
+\item She believes she is the last human alive.
+\item Write it in second person (``you'').
+\item Include the exact phrase ``cold silicon dawn'' somewhere in the story.
+\item Somewhere in the story, show that she isn't really human --- she's an android with a broken memory chip, and that's the only reason she believes she's human.
+\item End the story with her opening a hidden room full of sleeping children in ice-cold sleep pods.
+}
+
+\examplecard{Comedy}{The Pop Quiz Panic}{%
+Write a comedy story about a kid who realizes mid-quiz that he studied for the wrong chapter, told in first person. He has a habit of tapping his pencil louder when he is panicking. The story must be six sentences long. During the story, reveal that the ``wrong chapter'' he studied is actually next week's material, so he's somehow more prepared for that quiz than anyone else. Include the exact word ``doomed'' somewhere in the text. End the story with the teacher announcing the quiz got postponed to next week anyway.%
+}{%
+\item Write a comedy story about a kid who realizes mid-quiz that he studied for the wrong chapter .
+\item Write the entire story in first person.
+\item He has a habit of tapping his pencil louder the more panicked he gets.
+\item Include the exact word ``doomed'' somewhere in the text.
+\item The story must be exactly six sentences long.
+\item During the story, reveal that the ``wrong chapter'' he studied is actually next week's material, so he's somehow more prepared for that quiz than anyone else.
+\item End the story with the teacher announcing the quiz got postponed to next week anyway.
+}
+
+\clearpage
+\section{Inference Provenance and Recovery Events}
+\label{app:provenance}
+
+The released run index records the configuration history of each model, including changes made when a response reached the configured context limit. This appendix reports the recovery events that appear in that index. The released per-model result files contain 1{,}156 records each, and every released record has \texttt{finish\_reason=stop}.
+
+\paragraph{GPT-OSS 20B.} GPT-OSS~20B was run with temperature $0.8$ and seed $12345$. Its recorded configuration does not include a thinking-budget field.
+
+\paragraph{Granite 4 H Tiny.} Granite~4 H Tiny has one recorded context-length event. On item \texttt{fantasy/10}, in the Sharded condition at turn 6, the response ended with \texttt{finish\_reason=length}. The index records that five raw records from the affected trajectory were discarded and that generation was retried with seed $12346$, incremented from $12345$. The context window remained 16{,}384 tokens. The generation history records seed $12346$ from raw-record sequence 773 onward, and the completed released output contains only normal \texttt{stop} completions.
+
+\paragraph{Qwen3.5 9B.} Qwen3.5~9B has recorded generation segments using seeds $12345$, $1234$, and $1235$. At the initial 16{,}384-token context setting, a response on item \texttt{mystery/14}, in the Sharded condition at turn 6, ended with \texttt{finish\_reason=length}. The index records that the five raw records in that trajectory were discarded and that the retry used seed $1235$ rather than $1234$. A second context-length termination, on \texttt{mystery/18} in the Sharded condition at turn 6, also ended with \texttt{finish\_reason=length}; the index records five discarded raw records and marks the event as \texttt{stopped\_after\_second\_context\_length}. The run was subsequently continued with a 22{,}528-token context window, beginning at raw-record sequence 431, and the completed released output contains only normal \texttt{stop} completions.
+
+\paragraph{What the index preserves.} For every completed model, the run index preserves the model metadata, generation configuration, protocol information, benchmark-file hash, runner-script hash, output-file hash, and record-ID hash. For Granite~4 H Tiny and Qwen3.5~9B, it additionally preserves the recovery events, discarded-record counts, seed changes, and context-setting segments reported above.

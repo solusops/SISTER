@@ -18,6 +18,20 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage{enumitem}
+\usepackage{soul} % \hl{} highlighting used by the sharding-example figure
+\usepackage[most]{tcolorbox} % benchmark-example cards in the appendix
+
+% Loosen LaTeX's default float placement limits so figures/tables stay near
+% their section instead of drifting to the end of the document once many
+% [t]-placed floats accumulate (this paper has 8: 4 figures, 2 tables, plus
+% two more figures).
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{6}
 
 % ==============================================================================
 % Citations & Bibliography
@@ -50,11 +64,20 @@
 \title{\textbf{The Effects of Incremental Instruction Delivery on Language-Model Creative Writing}}
 
 \author{
-    Anshuman Singh \quad Abrar Eyasir \quad Haseeb Yaqoob \quad John Manavalan \\
-    \texttt{anshumanr434@gmail.com}
+    Anshuman Singh$^{1}$ \quad
+    Abrar Eyasir$^{2}$ \quad
+    Haseeb Yaqoob$^{3}$ \quad
+    John Manavalan$^{4}$ \\[0.3em]
+    \small
+    $^{1}$School of Engineering \& Technology, SGT University, India \\
+    $^{2}$Computer Science and Engineering, University of Dhaka, Bangladesh \\
+    $^{3}$Computer Science and Information Technology, NEDUET, Pakistan \\
+    $^{4}$Metea Valley High School, Illinois, USA \\[0.3em]
+    \texttt{anshumanr434@gmail.com} \quad \texttt{eyasir2047@gmail.com} \\
+    \texttt{haseeb.yaqoob201@gmail.com} \quad \texttt{professor.paranormal159@gmail.com}
 }
 
-\date{\today}
+\date{}
 
 % ==============================================================================
 % Main Document Content
@@ -69,7 +92,9 @@
 \input{sections/03_methodology.tex}
 \input{sections/04_experiments.tex}
 \input{sections/05_discussion.tex}
-\input{sections/06_conclusion.tex}
+\input{sections/06_limitations.tex}
+\input{sections/07_conclusion.tex}
+\input{sections/08_availability_acknowledgments.tex}
 
 % ==============================================================================
 % Bibliography
@@ -80,7 +105,6 @@
 % ==============================================================================
 % Appendix
 % ==============================================================================
-\clearpage
-\input{sections/99_appendix.tex}
+\input{sections/09_appendix.tex}
 
 \end{document}
