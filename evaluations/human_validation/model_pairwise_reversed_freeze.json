@@ -1,8 +1,0 @@
-{
-  "pass": "reversed",
-  "cases": 30,
-  "responses": 60,
-  "cases_sha256": "d7d0f139ebfe73995de6348c49c5d925c2a45e6c40f1430c8690032bde40c066",
-  "judgments_sha256": "edbf4d9a31b0860584916d35a8580ed7659f002475f6c20edb4353a1c5e6214f",
-  "comparison_with_humans_performed": false
-}

@@ -1,8 +1,0 @@
-{
-  "pass": "primary",
-  "cases": 30,
-  "responses": 60,
-  "cases_sha256": "a6c566e8f0d4df190358ababab6ad9f387bef242c35444841d1a024a8aeb3d76",
-  "judgments_sha256": "366ef95d682da23ded92a50c58f84ba97aeaa6cc731762a9be490d48aeeddfbd",
-  "comparison_with_humans_performed": false
-}
