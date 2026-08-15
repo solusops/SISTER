@@ -28,7 +28,8 @@ Configs pushed (each is its own DatasetDict via push_to_hub(..., config_name=...
     pointwise_scores            -- split "scores"                (evaluations/scores.jsonl)
     pairwise_validation         -- splits "primary", "reversed"  (human_validation/model_pairwise_*.jsonl)
     evidence_first_validation   -- splits "primary", "reversed"  (human_validation/evidence_first_*.jsonl)
-    human_eval                  -- splits "sample", "annotations"(human_validation/sample_30.jsonl, annotations.jsonl)
+    human_eval_sample            -- one HF config, sample_30.jsonl (different schema from annotations, so a
+    human_eval_annotations       -- separate config, not a second split -- see push_human_eval())
 
 Plain repo files pushed alongside (NOT dataset splits -- provenance, schemas,
 and methodology docs are not row-shaped data; forcing them into splits would
@@ -140,13 +141,16 @@ def push_evidence_first_validation(repo_id: str, private: bool) -> None:
 
 
 def push_human_eval(repo_id: str, private: bool) -> None:
+    # sample_30.jsonl and annotations.jsonl have genuinely different schemas
+    # (task/response fields vs. annotator judgment fields) -- datasets'
+    # DatasetDict.push_to_hub requires identical features across the splits
+    # of one config, so these are two configs, not two splits of one.
     base = "evaluations/human_validation"
     sample = Dataset.from_json(f"{base}/sample_30.jsonl")
     annotations = Dataset.from_json(f"{base}/annotations.jsonl")
-    print(f"  human_eval/sample: {len(sample)} rows, annotations: {len(annotations)} rows")
-    DatasetDict({"sample": sample, "annotations": annotations}).push_to_hub(
-        repo_id, config_name="human_eval", private=private
-    )
+    print(f"  human_eval_sample: {len(sample)} rows, human_eval_annotations: {len(annotations)} rows")
+    DatasetDict({"sample": sample}).push_to_hub(repo_id, config_name="human_eval_sample", private=private)
+    DatasetDict({"annotations": annotations}).push_to_hub(repo_id, config_name="human_eval_annotations", private=private)
 
 
 CONFIG_PUSHERS = {

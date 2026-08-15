@@ -38,7 +38,8 @@ Load any config with `datasets.load_dataset(repo_id, config_name=...)`.
 | `pointwise_scores` | `scores` | 1,920 | Per-constraint adherence + 5-dimension creative-quality scores, one row per final generation record. `source` field distinguishes the judging pass that produced each row. |
 | `pairwise_validation` | `primary`, `reversed` | 30 each | A/B preference judgments over a fixed 30-case blind sample, in original and swapped response order (position-bias check). |
 | `evidence_first_validation` | `primary`, `reversed` | 30 each | An independent, evidence-first pairwise evaluator over the same 30 cases: per-constraint satisfied/partial/violated audit + evidence before a final preference. |
-| `human_eval` | `sample`, `annotations` | 30 / 11 | The blind 30-case sample itself, and the human annotations completed against it so far (expected to grow — the sample doesn't change, `annotations` does). |
+| `human_eval_sample` | `sample` | 30 | The blind 30-case sample itself (task, constraints, both responses). |
+| `human_eval_annotations` | `annotations` | 11 | Human-validation annotations against the sample above (a separate config, not a split of `human_eval_sample` -- the two have different schemas). |
 
 ## Plain repo files (not dataset splits)
 
@@ -64,8 +65,9 @@ Load any config with `datasets.load_dataset(repo_id, config_name=...)`.
   `fantasy_001`) — joins `benchmark`, `constraints.jsonl`, and any score row.
 - `record_id` — unique per generation attempt; joins `generations` rows to
   `pointwise_scores` rows.
-- `case_id` (`case-01`..`case-30`) — joins `human_eval`, `pairwise_validation`,
-  and `evidence_first_validation` rows for the same fixed sample.
+- `case_id` (`case-01`..`case-30`) — joins `human_eval_sample`,
+  `human_eval_annotations`, `pairwise_validation`, and
+  `evidence_first_validation` rows for the same fixed sample.
 
 ## Provenance
 
