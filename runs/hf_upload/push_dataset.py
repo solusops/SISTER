@@ -84,6 +84,8 @@ PLAIN_FILES = [
     ("evaluations/human_validation/evidence_first_position_consistency.json", "methodology/evidence_first_position_consistency.json"),
     ("evaluations/human_validation/evidence_first_constraint_stability.json", "methodology/evidence_first_constraint_stability.json"),
     ("evaluations/human_validation/evidence_first_dimension_stability.json", "methodology/evidence_first_dimension_stability.json"),
+    ("evaluations/human_validation/human_model_agreement_summary.json", "methodology/human_model_agreement_summary.json"),
+    ("evaluations/human_validation/human_model_disagreements.md", "methodology/human_model_disagreements.md"),
     ("ARTIFACT_MANIFEST.json", "ARTIFACT_MANIFEST.json"),
 ]
 
