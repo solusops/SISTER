@@ -1,5 +1,5 @@
 {
-  "human_cases_completed": 11,
+  "human_cases_completed": 30,
   "human_case_ids": [
     "case-01",
     "case-02",
@@ -11,7 +11,26 @@
     "case-08",
     "case-09",
     "case-10",
-    "case-11"
+    "case-11",
+    "case-12",
+    "case-13",
+    "case-14",
+    "case-15",
+    "case-16",
+    "case-17",
+    "case-18",
+    "case-19",
+    "case-20",
+    "case-21",
+    "case-22",
+    "case-23",
+    "case-24",
+    "case-25",
+    "case-26",
+    "case-27",
+    "case-28",
+    "case-29",
+    "case-30"
   ],
   "ordinal_encoding": {
     "A clearly better": -2,
@@ -22,23 +41,23 @@
   },
   "weighting": "quadratic ordinal weights: 1 - ((i - j) / 4)^2 on the ordered five-level scale",
   "constraint_following": {
-    "n": 11,
-    "exact_five_level_agreement": 0.36363636363636365,
-    "directional_agreement": 0.5454545454545454,
-    "weighted_cohens_kappa_quadratic": 0.4210526315789472,
-    "collapsed_cohens_kappa": 0.12698412698412687,
-    "mean_absolute_disagreement": 1.1818181818181819,
-    "severe_disagreement_rate": 0.18181818181818182,
-    "severe_disagreement_cases": 2
+    "n": 30,
+    "exact_five_level_agreement": 0.3333333333333333,
+    "directional_agreement": 0.6333333333333333,
+    "weighted_cohens_kappa_quadratic": 0.5442536327608986,
+    "collapsed_cohens_kappa": 0.32926829268292684,
+    "mean_absolute_disagreement": 1.1,
+    "severe_disagreement_rate": 0.1,
+    "severe_disagreement_cases": 3
   },
   "creative_writing_quality": {
-    "n": 11,
-    "exact_five_level_agreement": 0.5454545454545454,
-    "directional_agreement": 0.5454545454545454,
-    "weighted_cohens_kappa_quadratic": 0.4798598949211913,
-    "collapsed_cohens_kappa": 0.21428571428571422,
-    "mean_absolute_disagreement": 1,
-    "severe_disagreement_rate": 0.2727272727272727,
-    "severe_disagreement_cases": 3
+    "n": 30,
+    "exact_five_level_agreement": 0.3,
+    "directional_agreement": 0.4,
+    "weighted_cohens_kappa_quadratic": 0.07837445573294617,
+    "collapsed_cohens_kappa": -0.034482758620689585,
+    "mean_absolute_disagreement": 1.5666666666666667,
+    "severe_disagreement_rate": 0.26666666666666666,
+    "severe_disagreement_cases": 8
   }
 }
