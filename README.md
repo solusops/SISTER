@@ -2,6 +2,8 @@
 
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22700810-blue)](https://doi.org/10.5281/zenodo.22700810)
 
+[![HF](https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/SolusOps/incremental-instruction-creative-writing)
+
 Does splitting a story's instructions across a conversation, instead of
 giving them all at once, change what a language model writes?
 
