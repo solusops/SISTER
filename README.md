@@ -122,10 +122,12 @@ Anshuman Singh, Abrar Eyasir, Haseeb Yaqoob, and John Manavalan, 2026.
 If you use this work, please cite:
 
 ```bibtex
-@article{singh2026incremental,
-  title   = {The Effects of Incremental Instruction Delivery on Language-Model Creative Writing},
-  author  = {Singh, Anshuman and Eyasir, Abrar and Yaqoob, Haseeb and Manavalan, John},
-  year    = {2026},
-  doi     = {10.5281/zenodo.22700810},
-  url     = {https://doi.org/10.5281/zenodo.22700810}
+@misc{singh2026effectsincrementalinstructiondelivery,
+      title={The Effects of Incremental Instruction Delivery on Language-Model Creative Writing}, 
+      author={Anshuman Singh and Abrar Eyasir and Haseeb Yaqoob and John Manavalan},
+      year={2026},
+      eprint={2609.33738},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2609.33738}, 
 }
